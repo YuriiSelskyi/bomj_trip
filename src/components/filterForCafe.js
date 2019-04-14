@@ -27,7 +27,7 @@ export default class FilterForCafe extends Component {
           </Dropdown>
         </div>
         <div>
-          <ButtonToolbar className="radio-button,">
+          <ButtonToolbar className="radio-button">
             <Button className="filter" variant="outline-primary">Nearest</Button>
             <Button className="filter" variant="outline-success">Cheapest</Button>
             <Button className="filter" variant="outline-danger">Popular</Button>
@@ -36,7 +36,6 @@ export default class FilterForCafe extends Component {
         </div>
         <div>
         <ButtonToolbar>
-          <Button><img src="../images/wifi.png" /></Button>
           <Button>2</Button>
           <Button>3</Button>
           <Button>4</Button>
