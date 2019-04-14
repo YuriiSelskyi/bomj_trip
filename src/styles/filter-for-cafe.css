@@ -1,10 +1,23 @@
 .dropdown {
+    width: 50rem;
     display: flex;
     justify-content: center;
 }
 
+.spacer {
+    padding-top: 80px;
+    padding-bottom: 40px
+}
+
 .radio-button {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter {
+    width: 10rem;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
 }
