@@ -34,6 +34,15 @@ export default class FilterForCafe extends Component {
             <Button variant="outline-info">The best for you</Button>
           </ButtonToolbar>
         </div>
+        <div>
+        <ButtonToolbar>
+          <Button><img src="../images/wifi.png" /></Button>
+          <Button>2</Button>
+          <Button>3</Button>
+          <Button>4</Button>
+          <Button>5</Button>
+        </ButtonToolbar>
+        </div>
       </div>
     );
   }
