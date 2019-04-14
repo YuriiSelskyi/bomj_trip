@@ -4,9 +4,32 @@ import {
   ButtonToolbar,
   Button,
 } from 'react-bootstrap';
+import {
+  FaWifi,
+  FaCcVisa,
+  FaPercent,
+  FaPagelines,
+  FaMusic,
+  FaCoffee,
+  FaGlassMartini,
+  FaTree,
+  FaClock,
+} from 'react-icons/fa';
 import '../styles/filter-for-cafe.css';
 
 export default class FilterForCafe extends Component {
+  state = {
+    wiFi: false,
+    paymentByCard: false,
+    discounts: false,
+    vegeterianMenu: false,
+    liveMusic: false,
+    businessLunch: false,
+    alcohol: false,
+    terrace: false,
+    allNight: false,
+    // confirm: false
+  }
   render () {
     return (
       <div>
@@ -35,13 +58,62 @@ export default class FilterForCafe extends Component {
           </ButtonToolbar>
         </div>
         <div>
-        <ButtonToolbar>
-          <Button><img src="../images/wifi.png" /></Button>
-          <Button>2</Button>
-          <Button>3</Button>
-          <Button>4</Button>
-          <Button>5</Button>
-        </ButtonToolbar>
+          <ButtonToolbar onClick={()=>{console.log(this.state)}}>
+            <Button
+              name="wiFi"
+              onClick={() => {this.setState({  wiFi: !this.state.wiFi })}}
+            >
+              <FaWifi />
+            </Button>
+            <Button
+              name="paymentByCard"
+              onClick={() => {this.setState({  paymentByCard: !this.state.paymentByCard })}}
+            >
+              <FaCcVisa />
+            </Button>
+            <Button
+              name="discounts"
+              onClick={() => {this.setState({  discounts: !this.state.discounts })}}
+            >
+              <FaPercent />
+            </Button>
+            <Button
+              name="vegeterianMenu"
+              onClick={() => {this.setState({  vegeterianMenu: !this.state.vegeterianMenu })}}
+            >
+              <FaPagelines />
+            </Button>
+            <Button
+              name="liveMusic"
+              onClick={() => {this.setState({  liveMusic: !this.state.liveMusic })}}
+            >
+              <FaMusic />
+            </Button>
+            <Button
+              name="businessLunch"
+              onClick={() => {this.setState({  businessLunch: !this.state.businessLunch })}}
+            >
+              <FaCoffee />
+            </Button>
+            <Button
+              name="alcohol"
+              onClick={() => {this.setState({  alcohol: !this.state.alcohol })}}
+            >
+              <FaGlassMartini />
+            </Button>
+            <Button
+              name="terrace"
+              onClick={() => {this.setState({  terrace: !this.state.terrace })}}
+            >
+              <FaTree />
+            </Button>
+            <Button
+              name="allNight"
+              onClick={() => {this.setState({  allNight: !this.state.allNight })}}
+            >
+              <FaClock />
+            </Button>
+          </ButtonToolbar>
         </div>
       </div>
     );
