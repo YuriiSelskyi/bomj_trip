@@ -8,3 +8,10 @@
     display: flex;
     justify-content: space-between;
 }
+
+.filter {
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
