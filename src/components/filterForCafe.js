@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
-import Dropdown from 'react-bootstrap/Dropdown';
+import {
+  Dropdown,
+  ButtonToolbar,
+  Button,
+} from 'react-bootstrap';
 import '../styles/filter-for-cafe.css';
 
 export default class FilterForCafe extends Component {
@@ -8,16 +12,27 @@ export default class FilterForCafe extends Component {
       <div>
         <div>
           <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic" className="dropdown">
+            <Dropdown.Toggle
+              variant="success"
+              id="dropdown-basic"
+              className="dropdown"
+            >
               TOP 10
             </Dropdown.Toggle>
-
             <Dropdown.Menu>
               <Dropdown.Item href="#/action-1">TOP 5</Dropdown.Item>
               <Dropdown.Item href="#/action-2">TOP 20</Dropdown.Item>
               <Dropdown.Item href="#/action-3">TOP 100</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+        </div>
+        <div>
+          <ButtonToolbar className="radio-button">
+            <Button variant="outline-primary">Nearest</Button>
+            <Button variant="outline-success">Cheapest</Button>
+            <Button variant="outline-danger">Popular</Button>
+            <Button variant="outline-info">The best for you</Button>
+          </ButtonToolbar>
         </div>
       </div>
     );
