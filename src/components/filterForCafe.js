@@ -58,14 +58,6 @@ export default class FilterForCafe extends Component {
           </ButtonToolbar>
         </div>
         <div>
-<<<<<<< HEAD
-        <ButtonToolbar>
-          <Button>2</Button>
-          <Button>3</Button>
-          <Button>4</Button>
-          <Button>5</Button>
-        </ButtonToolbar>
-=======
           <ButtonToolbar onClick={()=>{console.log(this.state)}}>
             <Button
               name="wiFi"
@@ -122,7 +114,6 @@ export default class FilterForCafe extends Component {
               <FaClock />
             </Button>
           </ButtonToolbar>
->>>>>>> 7975402c59b0f98630c3e2b73080843a14363df0
         </div>
       </div>
     );
