@@ -28,7 +28,7 @@ export default class FilterForCafe extends Component {
     alcohol: false,
     terrace: false,
     allNight: false,
-    // confirm: false
+    // confirm: false,
   }
   render () {
     return (
@@ -58,7 +58,7 @@ export default class FilterForCafe extends Component {
           </ButtonToolbar>
         </div>
         <div>
-          <ButtonToolbar onClick={()=>{console.log(this.state)}}>
+          <ButtonToolbar>
             <Button
               name="wiFi"
               onClick={() => {this.setState({  wiFi: !this.state.wiFi })}}
