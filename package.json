@@ -1,28 +1,23 @@
 {
-  "name": "bomj_trip",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.8",
-    "react-dom": "^16.8.6",
-    "react-icons": "^3.5.0",
-    "react-scripts": "2.1.8"
-  },
+  "name": "server-packages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuriiSelskyi/bomj_trip.git"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuriiSelskyi/bomj_trip/issues"
+  },
+  "homepage": "https://github.com/YuriiSelskyi/bomj_trip#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
