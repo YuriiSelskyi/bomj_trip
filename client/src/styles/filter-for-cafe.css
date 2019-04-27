@@ -14,8 +14,8 @@
 }
 
 .filter {
-    width: 9rem;
+    width: 40%;
     height: 3rem;
     border-radius: 20px !important;
-    margin: 10px 5px;
+    margin: 8px 5px;
 }

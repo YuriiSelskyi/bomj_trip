@@ -54,7 +54,7 @@ export default class FilterForCafe extends Component {
             <Button className="filter" variant="outline-primary">Nearest</Button>
             <Button className="filter" variant="outline-success">Cheapest</Button>
             <Button className="filter" variant="outline-danger">Popular</Button>
-            <Button className="filter" variant="outline-info">The best for you</Button>
+            <Button className="filter" variant="outline-info">The best</Button>
           </ButtonToolbar>
         </div>
         <div>
