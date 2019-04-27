@@ -26,10 +26,20 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state);
     return (
       <div>
-        <FilterForCafe />
-        <p>{this.state.data[0].testTablecol}</p>
+        <div className="advertising">
+          <h1>Advertising</h1>
+        </div>
+        <div className="main">
+          <div className="menu">
+            <FilterForCafe />
+          </div>
+          <div className="cafe-list">
+            <p>{this.state.data[0].testTablecol}</p>
+          </div>
+        </div>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 .dropdown {
-    width: 70%;
+    width: 90%;
     right: auto;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
@@ -14,10 +14,8 @@
 }
 
 .filter {
-    width: 14rem;
-    height: 5rem;
+    width: 9rem;
+    height: 3rem;
     border-radius: 20px !important;
-    margin-top: 50px;
-    margin-left: 20px;
-    
+    margin: 10px 5px;
 }
