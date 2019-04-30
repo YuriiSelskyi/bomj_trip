@@ -4,6 +4,8 @@ import {
   ButtonToolbar,
   Button,
 } from 'react-bootstrap';
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 import {
   FaWifi,
   FaCcVisa,
@@ -19,18 +21,38 @@ import '../styles/filter-for-cafe.css';
 
 export default class FilterForCafe extends Component {
   state = {
-    wiFi: false,
-    paymentByCard: false,
-    discounts: false,
-    vegeterianMenu: false,
-    liveMusic: false,
-    businessLunch: false,
-    alcohol: false,
-    terrace: false,
-    allNight: false,
+    // TODO: change data state
+    checkboxButtons: {
+      wiFi: false,
+      paymentByCard: false,
+      discounts: false,
+      vegeterianMenu: false,
+      liveMusic: false,
+      businessLunch: false,
+      alcohol: false,
+      terrace: false,
+      allNight: false,
+    },
+    radioButtons: {
+      nearYou: true,
+      chipest: false,
+      popular: false,
+    },
     // confirm: false,
   }
+
+  changeCheckboxButtons = (name) => {
+    this.setState(prevState => ({
+      ...prevState,
+      checkboxButtons: {
+        ...prevState.checkboxButtons,
+        [name]: !this.state.checkboxButtons[name],
+      },
+    }));
+  }
+
   render () {
+    console.log(this.state.checkboxButtons)
     return (
       <div>
         <div>
@@ -58,62 +80,63 @@ export default class FilterForCafe extends Component {
           </ButtonToolbar>
         </div>
         <div>
-          <ButtonToolbar>
-            <Button
-              name="wiFi"
-              onClick={() => {this.setState({  wiFi: !this.state.wiFi })}}
+          <div>
+            <AwesomeButton
+              type="primary"
+              onPress={() => this.changeCheckboxButtons('wiFi')}
             >
               <FaWifi />
-            </Button>
-            <Button
-              name="paymentByCard"
-              onClick={() => {this.setState({  paymentByCard: !this.state.paymentByCard })}}
+            </AwesomeButton>
+            <AwesomeButton
+              type="primary"
+              onPress={() => this.changeCheckboxButtons('paymentByCard')}
             >
               <FaCcVisa />
-            </Button>
-            <Button
-              name="discounts"
-              onClick={() => {this.setState({  discounts: !this.state.discounts })}}
+            </AwesomeButton>
+            <AwesomeButton
+              type="primary"
+              onPress={() => this.changeCheckboxButtons('discounts')}
             >
               <FaPercent />
-            </Button>
-            <Button
-              name="vegeterianMenu"
-              onClick={() => {this.setState({  vegeterianMenu: !this.state.vegeterianMenu })}}
+            </AwesomeButton>
+            <AwesomeButton
+              type="primary"
+              onPress={() => this.changeCheckboxButtons('vegeterianMenu')}
             >
               <FaPagelines />
-            </Button>
-            <Button
-              name="liveMusic"
-              onClick={() => {this.setState({  liveMusic: !this.state.liveMusic })}}
+            </AwesomeButton>
+            <AwesomeButton
+              type="primary"
+              onPress={() => this.changeCheckboxButtons('liveMusic')}
             >
               <FaMusic />
-            </Button>
-            <Button
-              name="businessLunch"
-              onClick={() => {this.setState({  businessLunch: !this.state.businessLunch })}}
+            </AwesomeButton>
+            <AwesomeButton
+              type="primary"
+              onPress={() => this.changeCheckboxButtons('businessLunch')}
             >
               <FaCoffee />
-            </Button>
-            <Button
-              name="alcohol"
-              onClick={() => {this.setState({  alcohol: !this.state.alcohol })}}
+            </AwesomeButton>
+            <AwesomeButton
+              type="primary"
+              onPress={() => this.changeCheckboxButtons('alcohol')}
             >
               <FaGlassMartini />
-            </Button>
-            <Button
-              name="terrace"
-              onClick={() => {this.setState({  terrace: !this.state.terrace })}}
+            </AwesomeButton>
+            <AwesomeButton
+              type="primary"
+              onPress={() => this.changeCheckboxButtons('terrace')}
             >
               <FaTree />
-            </Button>
-            <Button
-              name="allNight"
-              onClick={() => {this.setState({  allNight: !this.state.allNight })}}
+            </AwesomeButton>
+            <AwesomeButton
+              type="primary"
+              onPress={() => this.changeCheckboxButtons('allNight')}
             >
               <FaClock />
-            </Button>
-          </ButtonToolbar>
+            </AwesomeButton>
+            </div>
+          {/* </ButtonToolbar> */}
         </div>
       </div>
     );
