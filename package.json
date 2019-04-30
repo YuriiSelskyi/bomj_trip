@@ -8,7 +8,9 @@
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-icons": "^3.5.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "^2.1.8",
+    "yarn": "^1.15.2",
+    "yarn-install": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
