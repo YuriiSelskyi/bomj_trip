@@ -22,14 +22,40 @@ export default class FilterForCafe extends Component {
     wiFi: false,
     paymentByCard: false,
     discounts: false,
-    vegeterianMenu: false,
+    vegetarianMenu: false,
     liveMusic: false,
     businessLunch: false,
     alcohol: false,
     terrace: false,
-    allNight: false,
-    // confirm: false,
+    allNight: false
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    this.getFilteredInstitution(this.state)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => console.log(err));
+  }
+
+  getFilteredInstitution = async (state) => {
+    const response = await fetch('/get-filtered-institution', {
+      method: "post",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(state)
+    });
+    const body = await response.json();
+
+    if (response.status !== 200) {
+      throw Error(body.message) 
+    }
+
+    return body;
+  };
+
   render () {
     return (
       <div>
@@ -61,7 +87,9 @@ export default class FilterForCafe extends Component {
           <ButtonToolbar>
             <Button
               name="wiFi"
-              onClick={() => {this.setState({  wiFi: !this.state.wiFi })}}
+              onClick={() => {
+                this.setState({  wiFi: !this.state.wiFi });
+              }}
             >
               <FaWifi />
             </Button>
@@ -73,13 +101,16 @@ export default class FilterForCafe extends Component {
             </Button>
             <Button
               name="discounts"
-              onClick={() => {this.setState({  discounts: !this.state.discounts })}}
+              onClick={() => {
+                console.log(this.state);
+                this.setState({  discounts: !this.state.discounts })
+              }}
             >
               <FaPercent />
             </Button>
             <Button
-              name="vegeterianMenu"
-              onClick={() => {this.setState({  vegeterianMenu: !this.state.vegeterianMenu })}}
+              name="vegetarianMenu"
+              onClick={() => {this.setState({  vegetarianMenu: !this.state.vegetarianMenu })}}
             >
               <FaPagelines />
             </Button>
