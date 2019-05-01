@@ -3,7 +3,6 @@ import FilterForCafe from './FilterForCafe';
 import Advertising from './Advertising';
 
 import '../styles/main.css';
-
 class App extends Component {
   state = {
     data: "Hello"
