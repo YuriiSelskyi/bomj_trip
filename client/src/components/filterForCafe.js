@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
+import Button from '@material-ui/core/Button';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+
+import FilledInput from '@material-ui/core/FilledInput';
+import Select from '@material-ui/core/Select';
 import {
   Dropdown,
   ButtonToolbar,
-  Button,
+  // Button,
 } from 'react-bootstrap';
-import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import {
   FaWifi,
@@ -64,124 +69,132 @@ export default class FilterForCafe extends Component {
         [name]: true,
       },
     }));
-  }
+  };
+
+  styles = theme => ({
+    fab: {
+      margin: theme.spacing.unit,
+    },
+    extendedIcon: {
+      marginRight: theme.spacing.unit,
+    },
+  });
 
   render () {
+    
     return (
       <div>
         <div>
-          <Dropdown>
-            <Dropdown.Toggle
-              variant="success"
-              id="dropdown-basic"
-              className="dropdown"
+          <FormControl variant="filled">
+            <InputLabel htmlFor="filled-age-native-simple">Age</InputLabel>
+            <Select
+              native
+              value={this.state.age}
+              onChange={() => {}}
+              input={<FilledInput name="age" id="filled-age-native-simple" />}
             >
-              TOP 10
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">TOP 5</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">TOP 20</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">TOP 100</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+              <option value="" />
+              <option value={10}>Ten</option>
+              <option value={20}>Twenty</option>
+              <option value={30}>Thirty</option>
+            </Select>
+          </FormControl>
         </div>
         <div>
-          <ButtonToolbar className="radio-button">
-            <Button
-              className="filter"
-              variant="outline-primary"
-              onClick={() => this.changeRadioButtons('nearYou')}
-            >
-              Nearest
-            </Button>
-            <Button
-              className="filter"
-              variant="outline-primary"
-              onClick={() => this.changeRadioButtons('chipest')}
-            >
-              Cheapest
-            </Button>
-            <Button
-              className="filter"
-              variant="outline-primary"
-              onClick={() => this .changeRadioButtons('popular')}
-            >
-              Popular
-            </Button>
-            <Button
-              className="filter"
-              variant="outline-primary"
-              onClick={() => this.changeRadioButtons('best')}
-            >
-              The best
-            </Button>
-          </ButtonToolbar>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={() => this.changeRadioButtons('nearYou')}
+          >
+            Nearest
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={() => this.changeRadioButtons('chipest')}
+          >
+            Cheapest
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={() => this.changeRadioButtons('popular')}
+          >
+            Popular
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={() => this.changeRadioButtons('best')}
+          >
+            The best
+          </Button>
         </div>
         <div>
-          <div className="cheak-box">
-            <AwesomeButton
-              className="primary"
-              type="primary"
+          <div>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('wiFi')}
             >
               <FaWifi />
-            </AwesomeButton>
-            <AwesomeButton
-              className="primary" 
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('paymentByCard')}
             >
               <FaCcVisa />
-            </AwesomeButton>
-            <AwesomeButton
-              className="primary" 
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('discounts')}
             >
               <FaPercent />
-            </AwesomeButton>
-            <AwesomeButton
-              className="primary" 
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('vegeterianMenu')}
             >
               <FaPagelines />
-            </AwesomeButton>
-            <AwesomeButton
-              className="primary" 
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('liveMusic')}
             >
               <FaMusic />
-            </AwesomeButton>
-            <AwesomeButton
-              className="primary" 
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('businessLunch')}
             >
               <FaCoffee />
-            </AwesomeButton>
-            <AwesomeButton
-              className="primary" 
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('alcohol')}
             >
               <FaGlassMartini />
-            </AwesomeButton>
-            <AwesomeButton
-              className="primary" 
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('terrace')}
             >
               <FaTree />
-            </AwesomeButton>
-            <AwesomeButton
-              className="primary" 
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('allNight')}
             >
               <FaClock />
-            </AwesomeButton>
+            </Button>
           </div>
         </div>
       </div>
