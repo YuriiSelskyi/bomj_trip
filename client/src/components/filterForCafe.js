@@ -41,9 +41,7 @@ export default class FilterForCafe extends Component {
       nearYou: true,
       chipest: false,
       popular: false,
-      best: false,
     },
-    // confirm: false,
   }
 
   changeCheckboxButtons = (name) => {
@@ -80,7 +78,6 @@ export default class FilterForCafe extends Component {
   });
 
   render () {
-    console.log(this.state);
     return (
       <div>
         <div>
@@ -113,63 +110,63 @@ export default class FilterForCafe extends Component {
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('wiFi')}
+              onClick={() => this.changeCheckboxButtons('wiFi')}
             >
               <FaWifi />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('paymentByCard')}
+              onClick={() => this.changeCheckboxButtons('paymentByCard')}
             >
               <FaCcVisa />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('discounts')}
+              onClick={() => this.changeCheckboxButtons('discounts')}
             >
               <FaPercent />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('vegeterianMenu')}
+              onClick={() => this.changeCheckboxButtons('vegeterianMenu')}
             >
               <FaPagelines />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('liveMusic')}
+              onClick={() => this.changeCheckboxButtons('liveMusic')}
             >
               <FaMusic />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('businessLunch')}
+              onClick={() => this.changeCheckboxButtons('businessLunch')}
             >
               <FaCoffee />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('alcohol')}
+              onClick={() => this.changeCheckboxButtons('alcohol')}
             >
               <FaGlassMartini />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('terrace')}
+              onClick={() => this.changeCheckboxButtons('terrace')}
             >
               <FaTree />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('allNight')}
+              onClick={() => this.changeCheckboxButtons('allNight')}
             >
               <FaClock />
             </Button>
