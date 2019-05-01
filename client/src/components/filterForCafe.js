@@ -84,40 +84,41 @@ export default class FilterForCafe extends Component {
     return (
       <div>
         <div>
-          <FormControl variant="filled">
-            <InputLabel htmlFor="filled-age-native-simple">Age</InputLabel>
+          <FormControl variant="filled" className = "dropDown">
+            <InputLabel htmlFor="filled-age-native-simple" ><div className = "dropDown"> TOP </div> </InputLabel>
             <Select
               native
               value={this.state.age}
               onChange={() => {}}
-              input={<FilledInput name="age" id="filled-age-native-simple" />}
+              input={<FilledInput name="TOP" id="filled-age-native-simple" />}
             >
               <option value="" />
-              <option value={10}>Ten</option>
-              <option value={20}>Twenty</option>
-              <option value={30}>Thirty</option>
+              <option value={10}>Top 10</option>
+              <option value={20}>Top 50</option>
+              <option value={30}>Top 100</option>
             </Select>
           </FormControl>
         </div>
-        <div>
+        <div className = "radio-button">
           <BottomNavigation
             showLabels
           >
-            <BottomNavigationAction label="Cheapest" icon={<RestoreIcon />} onClick={() => this.changeRadioButtons('chipest')} />
-            <BottomNavigationAction label="Popular" icon={<FavoriteIcon />} onClick={() => this.changeRadioButtons('popular')} />
-            <BottomNavigationAction label="Nearest" icon={<LocationOnIcon />} onClick={() => this.changeRadioButtons('nearYou')} />
+            <BottomNavigationAction className = "filter" label="Cheapest" icon={<RestoreIcon />} onClick={() => this.changeRadioButtons('chipest')} />
+            <BottomNavigationAction className = "filter" label="Popular" icon={<FavoriteIcon />} onClick={() => this.changeRadioButtons('popular')} />
+            <BottomNavigationAction className = "filter" label="Nearest" icon={<LocationOnIcon />} onClick={() => this.changeRadioButtons('nearYou')} />
           </BottomNavigation>
         </div>
-        <div>
-          <div>
+        <div className = "check-box">
             <Button
+              className = "wiFi"
               variant="contained"
               color="primary"
               onPress={() => this.changeCheckboxButtons('wiFi')}
             >
-              <FaWifi />
+              <FaWifi /> 
             </Button>
             <Button
+              className = "paymentByCard"
               variant="contained"
               color="primary"
               onPress={() => this.changeCheckboxButtons('paymentByCard')}
@@ -125,6 +126,7 @@ export default class FilterForCafe extends Component {
               <FaCcVisa />
             </Button>
             <Button
+              className = "discounts"
               variant="contained"
               color="primary"
               onPress={() => this.changeCheckboxButtons('discounts')}
@@ -132,6 +134,7 @@ export default class FilterForCafe extends Component {
               <FaPercent />
             </Button>
             <Button
+              className = "vegeterianMenu"
               variant="contained"
               color="primary"
               onPress={() => this.changeCheckboxButtons('vegeterianMenu')}
@@ -139,6 +142,7 @@ export default class FilterForCafe extends Component {
               <FaPagelines />
             </Button>
             <Button
+              className = "liveMusic"
               variant="contained"
               color="primary"
               onPress={() => this.changeCheckboxButtons('liveMusic')}
@@ -146,6 +150,7 @@ export default class FilterForCafe extends Component {
               <FaMusic />
             </Button>
             <Button
+              className = "businessLunch"
               variant="contained"
               color="primary"
               onPress={() => this.changeCheckboxButtons('businessLunch')}
@@ -153,6 +158,7 @@ export default class FilterForCafe extends Component {
               <FaCoffee />
             </Button>
             <Button
+              className = "alcohol"
               variant="contained"
               color="primary"
               onPress={() => this.changeCheckboxButtons('alcohol')}
@@ -160,6 +166,7 @@ export default class FilterForCafe extends Component {
               <FaGlassMartini />
             </Button>
             <Button
+              className = "terrace"
               variant="contained"
               color="primary"
               onPress={() => this.changeCheckboxButtons('terrace')}
@@ -167,13 +174,13 @@ export default class FilterForCafe extends Component {
               <FaTree />
             </Button>
             <Button
+              className = "allNight"
               variant="contained"
               color="primary"
               onPress={() => this.changeCheckboxButtons('allNight')}
             >
               <FaClock />
             </Button>
-          </div>
         </div>
       </div>
     );
