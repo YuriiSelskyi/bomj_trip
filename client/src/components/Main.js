@@ -4,7 +4,6 @@ import Advertising from './Advertising';
 import CafeList from './CafeList';
 
 import '../styles/main.css';
-
 class App extends Component {
   state = {
     data: 'Hello'
