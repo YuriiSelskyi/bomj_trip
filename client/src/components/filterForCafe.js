@@ -104,7 +104,7 @@ export default class FilterForCafe extends Component {
             <Button
               className="filter"
               variant="outline-primary"
-              onClick={() => this.changeRadioButtons('popular')}
+              onClick={() => this .changeRadioButtons('popular')}
             >
               Popular
             </Button>
@@ -118,56 +118,65 @@ export default class FilterForCafe extends Component {
           </ButtonToolbar>
         </div>
         <div>
-          <div>
+          <div className="cheak-box">
             <AwesomeButton
+              className="primary"
               type="primary"
               onPress={() => this.changeCheckboxButtons('wiFi')}
             >
               <FaWifi />
             </AwesomeButton>
             <AwesomeButton
+              className="primary" 
               type="primary"
               onPress={() => this.changeCheckboxButtons('paymentByCard')}
             >
               <FaCcVisa />
             </AwesomeButton>
             <AwesomeButton
+              className="primary" 
               type="primary"
               onPress={() => this.changeCheckboxButtons('discounts')}
             >
               <FaPercent />
             </AwesomeButton>
             <AwesomeButton
+              className="primary" 
               type="primary"
               onPress={() => this.changeCheckboxButtons('vegeterianMenu')}
             >
               <FaPagelines />
             </AwesomeButton>
             <AwesomeButton
+              className="primary" 
               type="primary"
               onPress={() => this.changeCheckboxButtons('liveMusic')}
             >
               <FaMusic />
             </AwesomeButton>
             <AwesomeButton
+              className="primary" 
               type="primary"
               onPress={() => this.changeCheckboxButtons('businessLunch')}
             >
               <FaCoffee />
             </AwesomeButton>
             <AwesomeButton
+              className="primary" 
               type="primary"
               onPress={() => this.changeCheckboxButtons('alcohol')}
             >
               <FaGlassMartini />
             </AwesomeButton>
             <AwesomeButton
+              className="primary" 
               type="primary"
               onPress={() => this.changeCheckboxButtons('terrace')}
             >
               <FaTree />
             </AwesomeButton>
             <AwesomeButton
+              className="primary" 
               type="primary"
               onPress={() => this.changeCheckboxButtons('allNight')}
             >
