@@ -22,3 +22,8 @@ INSERT INTO `cafes` (`title`, `address`, `actions`, `workingHours`, `wiFi`, `pay
 INSERT INTO `cafes` (`title`, `address`, `actions`, `workingHours`, `wiFi`, `paymentByCard`, `discount`, `vegetarianMenu`, `liveMusic`, `businessLunch`, `alcohol`, `terrace`, `allNight`) VALUES ('Мандрівник', 'вулиця Лесі Українки, 39', 'Великий та недорогий асортимент', '10.00 - 20.00', '1', '1', '1', '0', '0', '0', '0', '0', '0');
 INSERT INTO `cafes` (`title`, `address`, `actions`, `workingHours`, `wiFi`, `paymentByCard`, `discount`, `vegetarianMenu`, `liveMusic`, `businessLunch`, `alcohol`, `terrace`, `allNight`) VALUES ('Пузата Хата', 'проспект Шевченка, 10', 'Великий та недорогий асортимент', '08.00 - 23.00', '0', '1', '1', '0', '0', '0', '0', '0', '0');
 INSERT INTO `cafes` (`title`, `address`, `actions`, `workingHours`, `wiFi`, `paymentByCard`, `discount`, `vegetarianMenu`, `liveMusic`, `businessLunch`, `alcohol`, `terrace`, `allNight`) VALUES ('Crazy Town', 'проспект Шевченка, 7', 'Щасливі години (будні 19.00 - 20.00)', '11.00 - 02.00', '1', '1', '1', '0', '0', '0', '1', '0', '0');
+
+UPDATE `cafes` SET `nearYou`='1' WHERE `id`='12';
+UPDATE `cafes` SET `nearYou`='1' WHERE `id`='16';
+UPDATE `cafes` SET `nearYou`='1' WHERE `id`='20';
+UPDATE `cafes` SET `nearYou`='1' WHERE `id`='24';

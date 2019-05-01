@@ -13,14 +13,14 @@ app.use(bodyParser.json())
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 app.post('/get-filtered-institution', (req, res) => {
-	let filter = req.body;
+	let filter = Object.assign({}, req.body.checkboxButtons, req.body.radioButtons);
 
-	for(let value in filter) {
-		if(!filter[value]) {
+	for (let value in filter) {
+		if (!filter[value]) {
 			delete filter[value];
 		}
 	}
-	
+
 	Cafes.findAll({
 		where: {
 			[Op.and]: filter

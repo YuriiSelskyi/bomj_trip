@@ -17,3 +17,8 @@ CREATE TABLE `cafes` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC),
   UNIQUE INDEX `title_UNIQUE` (`title` ASC));
+
+ALTER TABLE `cafes` 
+ADD COLUMN `nearYou` TINYINT(1) NOT NULL AFTER `allNight`,
+ADD COLUMN `cheapest` TINYINT(1) NOT NULL AFTER `nearYou`,
+ADD COLUMN `popular` TINYINT(1) NOT NULL AFTER `cheapest`;

@@ -58,6 +58,18 @@ var cafes = connection.define('cafes', {
 		type: sequelize.TINYINT(1),
 		allowNull: false
 	},
+	nearYou: {
+		type: sequelize.TINYINT(1),
+		allowNull: false
+	},
+	cheapest: {
+		type: sequelize.TINYINT(1),
+		allowNull: false
+	},
+	popular: {
+		type: sequelize.TINYINT(1),
+		allowNull: false
+	}
 });
 
 module.exports = cafes;
