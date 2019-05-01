@@ -37,22 +37,36 @@ export default class FilterForCafe extends Component {
       nearYou: true,
       chipest: false,
       popular: false,
+      best: false,
     },
     // confirm: false,
   }
 
   changeCheckboxButtons = (name) => {
+    const { checkboxButtons } = this.state;
     this.setState(prevState => ({
       ...prevState,
       checkboxButtons: {
         ...prevState.checkboxButtons,
-        [name]: !this.state.checkboxButtons[name],
+        [name]: !checkboxButtons[name],
+      },
+    }));
+  }
+
+  changeRadioButtons = (name) => {
+    this.setState(prevState => ({
+      ...prevState,
+      radioButtons: {
+        nearYou: false,
+        chipest: false,
+        popular: false,
+        best: false,
+        [name]: true,
       },
     }));
   }
 
   render () {
-    console.log(this.state.checkboxButtons)
     return (
       <div>
         <div>
@@ -73,10 +87,34 @@ export default class FilterForCafe extends Component {
         </div>
         <div>
           <ButtonToolbar className="radio-button">
-            <Button className="filter" variant="outline-primary">Nearest</Button>
-            <Button className="filter" variant="outline-success">Cheapest</Button>
-            <Button className="filter" variant="outline-danger">Popular</Button>
-            <Button className="filter" variant="outline-info">The best</Button>
+            <Button
+              className="filter"
+              variant="outline-primary"
+              onClick={() => this.changeRadioButtons('nearYou')}
+            >
+              Nearest
+            </Button>
+            <Button
+              className="filter"
+              variant="outline-primary"
+              onClick={() => this.changeRadioButtons('chipest')}
+            >
+              Cheapest
+            </Button>
+            <Button
+              className="filter"
+              variant="outline-primary"
+              onClick={() => this.changeRadioButtons('popular')}
+            >
+              Popular
+            </Button>
+            <Button
+              className="filter"
+              variant="outline-primary"
+              onClick={() => this.changeRadioButtons('best')}
+            >
+              The best
+            </Button>
           </ButtonToolbar>
         </div>
         <div>
@@ -135,8 +173,7 @@ export default class FilterForCafe extends Component {
             >
               <FaClock />
             </AwesomeButton>
-            </div>
-          {/* </ButtonToolbar> */}
+          </div>
         </div>
       </div>
     );
