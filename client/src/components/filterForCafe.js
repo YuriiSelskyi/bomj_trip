@@ -2,15 +2,14 @@ import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
-
 import FilledInput from '@material-ui/core/FilledInput';
+
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import RestoreIcon from '@material-ui/icons/Restore';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Select from '@material-ui/core/Select';
-import {
-  Dropdown,
-  ButtonToolbar,
-  // Button,
-} from 'react-bootstrap';
-import "react-awesome-button/dist/styles.css";
 import {
   FaWifi,
   FaCcVisa,
@@ -81,7 +80,7 @@ export default class FilterForCafe extends Component {
   });
 
   render () {
-    
+    console.log(this.state);
     return (
       <div>
         <div>
@@ -101,34 +100,13 @@ export default class FilterForCafe extends Component {
           </FormControl>
         </div>
         <div>
-          <Button
-            variant="outlined"
-            color="primary"
-            onClick={() => this.changeRadioButtons('nearYou')}
+          <BottomNavigation
+            showLabels
           >
-            Nearest
-          </Button>
-          <Button
-            variant="outlined"
-            color="primary"
-            onClick={() => this.changeRadioButtons('chipest')}
-          >
-            Cheapest
-          </Button>
-          <Button
-            variant="outlined"
-            color="primary"
-            onClick={() => this.changeRadioButtons('popular')}
-          >
-            Popular
-          </Button>
-          <Button
-            variant="outlined"
-            color="primary"
-            onClick={() => this.changeRadioButtons('best')}
-          >
-            The best
-          </Button>
+            <BottomNavigationAction label="Cheapest" icon={<RestoreIcon />} onClick={() => this.changeRadioButtons('chipest')} />
+            <BottomNavigationAction label="Popular" icon={<FavoriteIcon />} onClick={() => this.changeRadioButtons('popular')} />
+            <BottomNavigationAction label="Nearest" icon={<LocationOnIcon />} onClick={() => this.changeRadioButtons('nearYou')} />
+          </BottomNavigation>
         </div>
         <div>
           <div>
