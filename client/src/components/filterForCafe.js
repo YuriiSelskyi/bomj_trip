@@ -41,9 +41,7 @@ export default class FilterForCafe extends Component {
       nearYou: true,
       chipest: false,
       popular: false,
-      best: false,
     },
-    // confirm: false,
   }
 
   changeCheckboxButtons = (name) => {
@@ -80,7 +78,6 @@ export default class FilterForCafe extends Component {
   });
 
   render () {
-    console.log(this.state);
     return (
       <div>
         <div>
@@ -113,7 +110,7 @@ export default class FilterForCafe extends Component {
               className = "wiFi"
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('wiFi')}
+              onClick={() => this.changeCheckboxButtons('wiFi')}
             >
               <FaWifi /> 
             </Button>
@@ -121,7 +118,7 @@ export default class FilterForCafe extends Component {
               className = "paymentByCard"
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('paymentByCard')}
+              onClick={() => this.changeCheckboxButtons('paymentByCard')}
             >
               <FaCcVisa />
             </Button>
@@ -129,7 +126,7 @@ export default class FilterForCafe extends Component {
               className = "discounts"
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('discounts')}
+              onClick={() => this.changeCheckboxButtons('discounts')}
             >
               <FaPercent />
             </Button>
@@ -137,7 +134,7 @@ export default class FilterForCafe extends Component {
               className = "vegeterianMenu"
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('vegeterianMenu')}
+              onClick={() => this.changeCheckboxButtons('vegeterianMenu')}
             >
               <FaPagelines />
             </Button>
@@ -145,7 +142,7 @@ export default class FilterForCafe extends Component {
               className = "liveMusic"
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('liveMusic')}
+              onClick={() => this.changeCheckboxButtons('liveMusic')}
             >
               <FaMusic />
             </Button>
@@ -153,7 +150,7 @@ export default class FilterForCafe extends Component {
               className = "businessLunch"
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('businessLunch')}
+              onClick={() => this.changeCheckboxButtons('businessLunch')}
             >
               <FaCoffee />
             </Button>
@@ -161,7 +158,7 @@ export default class FilterForCafe extends Component {
               className = "alcohol"
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('alcohol')}
+              onClick={() => this.changeCheckboxButtons('alcohol')}
             >
               <FaGlassMartini />
             </Button>
@@ -169,7 +166,7 @@ export default class FilterForCafe extends Component {
               className = "terrace"
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('terrace')}
+              onClick={() => this.changeCheckboxButtons('terrace')}
             >
               <FaTree />
             </Button>
@@ -177,7 +174,7 @@ export default class FilterForCafe extends Component {
               className = "allNight"
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('allNight')}
+              onClick={() => this.changeCheckboxButtons('allNight')}
             >
               <FaClock />
             </Button>

@@ -1,8 +1,17 @@
 {
-  "name": "server-packages",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "bomj_trip",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "react-icons": "^3.5.0",
+    "react-scripts": "^2.1.8",
+    "yarn": "^1.15.2",
+    "yarn-install": "^1.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
