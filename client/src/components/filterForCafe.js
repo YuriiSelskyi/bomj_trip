@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
-import {
-  Dropdown,
-  ButtonToolbar,
-  Button,
-} from 'react-bootstrap';
-import { AwesomeButton } from "react-awesome-button";
-import "react-awesome-button/dist/styles.css";
+import Button from '@material-ui/core/Button';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FilledInput from '@material-ui/core/FilledInput';
+
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import RestoreIcon from '@material-ui/icons/Restore';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import Select from '@material-ui/core/Select';
 import {
   FaWifi,
   FaCcVisa,
@@ -37,106 +41,139 @@ export default class FilterForCafe extends Component {
       nearYou: true,
       chipest: false,
       popular: false,
+      best: false,
     },
     // confirm: false,
   }
 
   changeCheckboxButtons = (name) => {
+    const { checkboxButtons } = this.state;
     this.setState(prevState => ({
       ...prevState,
       checkboxButtons: {
         ...prevState.checkboxButtons,
-        [name]: !this.state.checkboxButtons[name],
+        [name]: !checkboxButtons[name],
       },
     }));
   }
 
+  changeRadioButtons = (name) => {
+    this.setState(prevState => ({
+      ...prevState,
+      radioButtons: {
+        nearYou: false,
+        chipest: false,
+        popular: false,
+        best: false,
+        [name]: true,
+      },
+    }));
+  };
+
+  styles = theme => ({
+    fab: {
+      margin: theme.spacing.unit,
+    },
+    extendedIcon: {
+      marginRight: theme.spacing.unit,
+    },
+  });
+
   render () {
-    console.log(this.state.checkboxButtons)
+    console.log(this.state);
     return (
       <div>
         <div>
-          <Dropdown>
-            <Dropdown.Toggle
-              variant="success"
-              id="dropdown-basic"
-              className="dropdown"
+          <FormControl variant="filled">
+            <InputLabel htmlFor="filled-age-native-simple">Age</InputLabel>
+            <Select
+              native
+              value={this.state.age}
+              onChange={() => {}}
+              input={<FilledInput name="age" id="filled-age-native-simple" />}
             >
-              TOP 10
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">TOP 5</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">TOP 20</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">TOP 100</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+              <option value="" />
+              <option value={10}>Ten</option>
+              <option value={20}>Twenty</option>
+              <option value={30}>Thirty</option>
+            </Select>
+          </FormControl>
         </div>
         <div>
-          <ButtonToolbar className="radio-button">
-            <Button className="filter" variant="outline-primary">Nearest</Button>
-            <Button className="filter" variant="outline-success">Cheapest</Button>
-            <Button className="filter" variant="outline-danger">Popular</Button>
-            <Button className="filter" variant="outline-info">The best</Button>
-          </ButtonToolbar>
+          <BottomNavigation
+            showLabels
+          >
+            <BottomNavigationAction label="Cheapest" icon={<RestoreIcon />} onClick={() => this.changeRadioButtons('chipest')} />
+            <BottomNavigationAction label="Popular" icon={<FavoriteIcon />} onClick={() => this.changeRadioButtons('popular')} />
+            <BottomNavigationAction label="Nearest" icon={<LocationOnIcon />} onClick={() => this.changeRadioButtons('nearYou')} />
+          </BottomNavigation>
         </div>
         <div>
           <div>
-            <AwesomeButton
-              type="primary"
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('wiFi')}
             >
               <FaWifi />
-            </AwesomeButton>
-            <AwesomeButton
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('paymentByCard')}
             >
               <FaCcVisa />
-            </AwesomeButton>
-            <AwesomeButton
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('discounts')}
             >
               <FaPercent />
-            </AwesomeButton>
-            <AwesomeButton
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('vegeterianMenu')}
             >
               <FaPagelines />
-            </AwesomeButton>
-            <AwesomeButton
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('liveMusic')}
             >
               <FaMusic />
-            </AwesomeButton>
-            <AwesomeButton
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('businessLunch')}
             >
               <FaCoffee />
-            </AwesomeButton>
-            <AwesomeButton
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('alcohol')}
             >
               <FaGlassMartini />
-            </AwesomeButton>
-            <AwesomeButton
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('terrace')}
             >
               <FaTree />
-            </AwesomeButton>
-            <AwesomeButton
-              type="primary"
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
               onPress={() => this.changeCheckboxButtons('allNight')}
             >
               <FaClock />
-            </AwesomeButton>
-            </div>
-          {/* </ButtonToolbar> */}
+            </Button>
+          </div>
         </div>
       </div>
     );
