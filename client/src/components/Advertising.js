@@ -6,7 +6,9 @@ export default class Advertising extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      imgArr: this.props.imgArr || ["https://images.freeimages.com/images/small-previews/773/koldalen-4-1384902.jpg"],
+      imgArr: this.props.imgArr || ["https://origami.lviv.ua/wp-content/uploads/slider-pizza-2.jpg.pagespeed.ce.SKOp6RpAao.jpg",
+                                    "https://panda-sushi.com.ua/uploads/pages/delivery/39_Delivery.jpg.jpg",
+                                    "http://www.fuji-sushi.kiev.ua/wp-content/uploads/2017/07/banner2.png"]
     };
   }
 
@@ -18,7 +20,7 @@ export default class Advertising extends React.Component {
 
     setTimeout(() => {
       this.setState({
-        children: this.createChildren(6),
+        children: this.createChildren(3),
       })
     }, 100);
   }
@@ -26,12 +28,20 @@ export default class Advertising extends React.Component {
   
   createChildren = n => range(n).map(i =>
      <div key={i}
-     style={{ height: '85px', backgroundImage: `url(${this.state.imgArr[0]})` }}>
+     style={{ height: '150px',
+              width:'100%', 
+              backgroundImage: `url(${this.state.imgArr[i]})`, 
+              backgroundRepeat: 'no-repeat', 
+              backgroundPosition: 'center center',
+              backgroundSize: 'cover'}}>
      </div>);
+    // <div key={i}>
+
+    //     <img src="http://www.fuji-sushi.kiev.ua/wp-content/uploads/2017/07/banner2.png"></img>
+    // </div>);
 
   changeActiveItem = (activeItemIndex) => this.setState({ activeItemIndex });
   render() {
-    console.log("sadasd" + this.state.imgArr)
     const {
       activeItemIndex,
       children,
