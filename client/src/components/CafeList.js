@@ -28,7 +28,7 @@ export default class CafeList extends Component {
   
   renderStars = (index) => {
     const { list } = this.props;
-    return [...Array(list[index].popular)].map((e, i) => <FaStar key={i}/>);
+    return [...Array(list[index].rating)].map((e, i) => <FaStar key={i}/>);
   }
 
   renderCafeList = () => {
@@ -44,11 +44,11 @@ export default class CafeList extends Component {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                {item.name}
+                {item.title}
               </Typography>
-              <Typography component="p">
+              <Typography component="div">
                 <div className="icons"><div>{this.renderStars(index)}</div><div><FaClock /> {item.workingHours}</div></div>
-                <p><FaMapMarker /> {item.address}</p>
+                <div><FaMapMarker /> {item.address}</div>
                 Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                 across all continents except Antarctica
               </Typography>
@@ -67,15 +67,13 @@ export default class CafeList extends Component {
   };
 
   render () {
-    const { redirect, indexElement } = this.state;
-    const { list } = this.props;
+    const { redirect } = this.state;
     if(redirect) {
       return <Redirect to='/cafe-details' />
     }
 
     return (
       <div className="list">
-        {/* <Route path="/" exact component={HomePage} /> */}
         {this.renderCafeList()}
       </div>
     );

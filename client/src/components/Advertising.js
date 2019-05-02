@@ -53,7 +53,7 @@ export default class Advertising extends React.Component {
         enablePlaceholder
         numberOfPlaceholderItems={10}
         minimumPlaceholderTime={1000}
-        placeholderItem={<div style={{ height: 200,}}>Placeholder</div>}
+        placeholderItem={<div style={{ height: 200 }}>Placeholder</div>}
 
         // Carousel configurations
         numberOfCards={3}
@@ -77,13 +77,3 @@ export default class Advertising extends React.Component {
     );  
   }
 } 
-
-// export default class Advertising extends Component {
-//   render() {
-//     return (
-//       <div>
-
-//       </div>
-//     );
-//   }
-// }

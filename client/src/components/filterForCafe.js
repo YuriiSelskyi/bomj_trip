@@ -1,15 +1,10 @@
 import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FilledInput from '@material-ui/core/FilledInput';
-
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import Select from '@material-ui/core/Select';
 import {
   FaWifi,
   FaCcVisa,
@@ -38,16 +33,16 @@ export default class FilterForCafe extends Component {
 			allNight: false,
 		},
 		radioButtons: {
-			nearYou: true,
+			nearYou: false,
 			cheapest: false,
 			popular: false,
 		}
 	}
 
-  componentDidUpdate(prevProps, prevState) {
-    this.getFilteredInstitution(this.state)
+  getFilteredCafe = (state) => {
+    this.getFilteredInstitution(state)
       .then(res => {
-        console.log(res);
+        this.props.changeStateCafes(res);
       })
       .catch(err => console.log(err));
   }
@@ -78,7 +73,7 @@ export default class FilterForCafe extends Component {
         ...prevState.checkboxButtons,
         [name]: !checkboxButtons[name],
       },
-    }));
+    }), () => this.getFilteredCafe(this.state));
   }
 
   changeRadioButtons = (name) => {
@@ -88,10 +83,9 @@ export default class FilterForCafe extends Component {
         nearYou: false,
         cheapest: false,
         popular: false,
-        best: false,
         [name]: true,
       },
-    }));
+    }), () => this.getFilteredCafe(this.state));
   };
 
   styles = theme => ({
@@ -106,12 +100,11 @@ export default class FilterForCafe extends Component {
   render() {
     return (
       <div>
-
-        <div class = "radio-button">
+        <div className = "radio-button">
           <BottomNavigation
             showLabels
           >
-            <BottomNavigationAction className = "filter" label="Cheapest" icon={<RestoreIcon />} onClick={() => this.changeRadioButtons('chipest')} />
+            <BottomNavigationAction className = "filter" label="Cheapest" icon={<RestoreIcon />} onClick={() => this.changeRadioButtons('cheapest')} />
             <BottomNavigationAction className = "filter" label="Popular" icon={<FavoriteIcon />} onClick={() => this.changeRadioButtons('popular')} />
             <BottomNavigationAction className = "filter" label="Nearest" icon={<LocationOnIcon />} onClick={() => this.changeRadioButtons('nearYou')} />
           </BottomNavigation>
