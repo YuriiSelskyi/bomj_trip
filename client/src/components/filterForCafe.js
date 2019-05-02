@@ -106,12 +106,8 @@ export default class FilterForCafe extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
-        <div className = "radio-button">
-=======
 
         <div class = "radio-button">
->>>>>>> 7590784227266b807928a71e26146d7102f47bf6
           <BottomNavigation
             showLabels
           >

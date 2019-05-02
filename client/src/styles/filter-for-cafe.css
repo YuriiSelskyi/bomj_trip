@@ -2,18 +2,12 @@
     background: transparent !important;  
 }
 
-<<<<<<< HEAD
+
 .filter {
-    border-bottom-width: 4px !important; 
+    border-bottom-width: 6px !important; 
     border-bottom-style: groove !important; 
     border-bottom-color: pink !important;
 }
-=======
-/* .filter {
-    
-} */
->>>>>>> 7590784227266b807928a71e26146d7102f47bf6
-
 .cheak-box {
     display: flex;
     justify-content: space-around !important;
@@ -125,7 +119,7 @@
 } 
 
 .wiFi:after  {
-    content: "\A\A WiFi";
+    content: "\A\A\A WiFi";
     white-space: pre-wrap;
     color: black;
     font-size: 1rem;
@@ -137,7 +131,7 @@
  }
 
  .paymentByCard:after  {
-    content: "\A\A Card";
+    content: "\A\A\A Card";
     white-space: pre-wrap;
     font-size: 1rem;
     margin-right: 3rem;
@@ -147,7 +141,7 @@
  }
 
  .discounts:after  {
-    content: "\A\A Discounts";
+    content: "\A\A\A Discounts";
     white-space: pre-wrap;
     color: black;
     font-size: 1rem;
@@ -157,7 +151,7 @@
     transform: translate(0, -50%);
  }
  .vegeterianMenu:after  {
-    content: "\A\A Vegeterian";
+    content: "\A\A\A Vegeterian";
     white-space: pre-wrap;
     color: black;
     font-size: 1rem;
@@ -167,7 +161,7 @@
     transform: translate(0, -50%);
  }
  .liveMusic:after  {
-    content: "\A\A Music";
+    content: "\A\A\A Music";
     white-space: pre-wrap;
     color: black;
     font-size: 1rem;
@@ -177,7 +171,7 @@
     transform: translate(0, -50%);
  }
  .businessLunch:after  {
-    content: "\A\A Lunch";
+    content: "\A\A\A Lunch";
     white-space: pre-wrap;
     color: black;
     font-size: 1rem;
@@ -187,7 +181,7 @@
     transform: translate(0, -50%);
  }
  .alcohol:after  {
-    content: "\A\A Alcohol";
+    content: "\A\A\A Alcohol";
     white-space: pre-wrap;
     color: black;
     font-size: 1rem;
@@ -197,7 +191,7 @@
     transform: translate(0, -50%);
  }
  .terrace:after  {
-    content: "\A\A Terracce";
+    content: "\A\A\A Terracce";
     white-space: pre-wrap;
     color: black;
     font-size: 1rem;
@@ -207,7 +201,7 @@
     transform: translate(0, -50%);
  }
  .allNight:after  {
-    content: "\A\A 24/7";
+    content: "\A\A\A 24/7";
     white-space: pre-wrap;
     color: black;
     font-size: 1rem;
