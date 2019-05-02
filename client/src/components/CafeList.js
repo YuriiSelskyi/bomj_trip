@@ -7,6 +7,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import {
+  FaStar,
+  FaClock,
+  FaMapMarker,
+} from 'react-icons/fa';
 import '../styles/cafe-list.css';
 export default class CafeList extends Component {
   state = {
@@ -20,11 +25,16 @@ export default class CafeList extends Component {
       indexElement: index,
     })
   }
+  
+  renderStars = (index) => {
+    const { list } = this.props;
+    return [...Array(list[index].popular)].map((e, i) => <FaStar key={i}/>);
+  }
 
   renderCafeList = () => {
     const {list} = this.props;
-    return list.map ((item, i) => (
-      <Card className="card" key={i} >
+    return list.map((item, index) => (
+      <Card className="card" key={index} >
           <CardActionArea>
             <CardMedia
               component="img"
@@ -37,6 +47,8 @@ export default class CafeList extends Component {
                 {item.name}
               </Typography>
               <Typography component="p">
+                <div className="icons"><div>{this.renderStars(index)}</div><div><FaClock /> {item.workingHours}</div></div>
+                <p><FaMapMarker /> {item.address}</p>
                 Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                 across all continents except Antarctica
               </Typography>
@@ -46,7 +58,7 @@ export default class CafeList extends Component {
             <Button size="small" color="primary">
               Share
             </Button>
-            <Button size="small" color="primary" onClick={() => this.redirect(i)}>
+            <Button size="small" color="primary" onClick={() => this.redirect(index)}>
               Learn More
             </Button>
           </CardActions>

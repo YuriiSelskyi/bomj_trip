@@ -1,9 +1,18 @@
 .list {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
 }
 
 .card {
   margin: 20px 25px;
-  width: 300px
+  width: 400px
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
