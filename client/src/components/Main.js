@@ -17,6 +17,7 @@ class App extends Component {
 				middleCheck: 200,
 				actions: 'asdasdasdas',
 				workingHours: '07.30 - 00.00',
+				popular: 4,
 			},
 			{
 				name: 'Білий Лев',
@@ -24,6 +25,7 @@ class App extends Component {
 				middleCheck: 300,
 				actions: 'asdasdasdas',
 				workingHours: '08.30 - 00.00',
+				popular: 3,
 			},
 			{
 				name: 'Корки і крихти',
@@ -31,6 +33,7 @@ class App extends Component {
 				middleCheck: 400,
 				actions: 'asdasdasdas',
 				workingHours: '04.30 - 00.00',
+				popular: 2,
 			},
 			{
 				name: 'Port wine bar',
@@ -38,6 +41,7 @@ class App extends Component {
 				middleCheck: 500,
 				actions: 'asdasdasdas',
 				workingHours: '07.30 - 00.00',
+				popular: 5,
 			},
 		];
 
