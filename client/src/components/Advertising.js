@@ -8,7 +8,10 @@ export default class Advertising extends React.Component {
     this.state = {
       imgArr: this.props.imgArr || ["https://origami.lviv.ua/wp-content/uploads/slider-pizza-2.jpg.pagespeed.ce.SKOp6RpAao.jpg",
                                     "https://panda-sushi.com.ua/uploads/pages/delivery/39_Delivery.jpg.jpg",
-                                    "http://www.fuji-sushi.kiev.ua/wp-content/uploads/2017/07/banner2.png"]
+                                    "http://www.fuji-sushi.kiev.ua/wp-content/uploads/2017/07/banner2.png",
+                                    "https://afisha.lutsk.ua/sites/image.life/company116/news-13997-210344838630792905175243838994881140790767n-12212-kb.jpg",
+                                    "https://static.wixstatic.com/media/3a6d9a_f131f5159e6e43b89bb7045b0805f8d8~mv2_d_8504_2835_s_4_2.jpg/v1/fill/w_630,h_210,al_c,q_80,usm_0.66_1.00_0.01/3a6d9a_f131f5159e6e43b89bb7045b0805f8d8~mv2_d_8504_2835_s_4_2.jpg",
+                                    "https://respect-shoes.com.ua/image/data/schfstlivie%20chasu.jpg"]
     };
   }
 
@@ -20,7 +23,7 @@ export default class Advertising extends React.Component {
 
     setTimeout(() => {
       this.setState({
-        children: this.createChildren(3),
+        children: this.createChildren(6),
       })
     }, 100);
   }
@@ -48,6 +51,7 @@ export default class Advertising extends React.Component {
     } = this.state;
 
     return (
+      
        <ItemsCarousel
         // Placeholder configurations
         enablePlaceholder

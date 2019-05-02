@@ -111,9 +111,9 @@ export default class FilterForCafe extends Component {
           <BottomNavigation
             showLabels
           >
-            <BottomNavigationAction className = "filter" label="Cheapest" icon={<RestoreIcon />} onClick={() => this.changeRadioButtons('chipest')} />
-            <BottomNavigationAction className = "filter" label="Popular" icon={<FavoriteIcon />} onClick={() => this.changeRadioButtons('popular')} />
-            <BottomNavigationAction className = "filter" label="Nearest" icon={<LocationOnIcon />} onClick={() => this.changeRadioButtons('nearYou')} />
+            <BottomNavigationAction className = "filter" label="Cheapest" icon={<RestoreIcon className = "filter" />} onClick={() => this.changeRadioButtons('chipest')} />
+            <BottomNavigationAction className = "filter" label="Popular" icon={<FavoriteIcon className = "filter" />} onClick={() => this.changeRadioButtons('popular')} />
+            <BottomNavigationAction className = "filter" label="Nearest" icon={<LocationOnIcon className = "filter" />} onClick={() => this.changeRadioButtons('nearYou')} />
           </BottomNavigation>
         </div>
         <div className = "check-box">
