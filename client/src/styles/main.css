@@ -15,8 +15,8 @@
 .menu {
     position: sticky;
     top: 0;
-    width: 450px;
-    height: 600px;
+    width: 380px;
+    height: 500px;
     /* height: 100%; */
     border: 2px double black;
     /* background: linear-gradient(to right, rgb(97, 144, 232), rgb(167, 191, 232)); */

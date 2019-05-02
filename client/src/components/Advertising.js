@@ -48,13 +48,6 @@ export default class Advertising extends React.Component {
     } = this.state;
 
     return (
-      <div>
-        <p>fasdfasd</p>
-        <p>fasdfasd</p>
-        <p>fasdfasd</p>
-        <p>fasdfasd</p>
-        <p>fasdfasd</p>
-        <p>fasdfasd</p>
        <ItemsCarousel
         // Placeholder configurations
         enablePlaceholder
@@ -81,7 +74,6 @@ export default class Advertising extends React.Component {
       >
         {children}
       </ItemsCarousel>
-      </div>
     );  
   }
 } 
