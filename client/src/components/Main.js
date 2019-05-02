@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import FilterForCafe from './filterForCafe';
+import FilterForCafe from './FilterForCafe';
 import Advertising from './Advertising';
 import CafeList from './CafeList';
 
