@@ -1,21 +1,202 @@
-.dropdown {
-    width: 90%;
-    right: auto;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    margin-top: 10px;
-}
-
-.radio-button {
-    display: flex !important;  
-    justify-content: space-around !important;
+.dropDown {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 2rem;
 }
 
 .filter {
-    width: 40%;
-    height: 3rem;
-    border-radius: 20px !important;
-    margin: 8px 5px;
+    margin-top: 20px !important;
 }
+
+.cheak-box {
+    display: flex;
+    justify-content: space-around !important;
+    
+}
+
+.wiFi {
+    font-size: 1.5rem !important;
+    width: 30% ;
+    height: 6rem ;
+    border-radius: 20px !important;
+    margin: 8px 5px  !important;
+    white-space: nowrap !important;
+    margin-top: 30px !important;
+    
+}
+.paymentByCard {
+    font-size: 1.5rem !important;
+    width: 30% ;
+    height: 6rem ;
+    border-radius: 20px !important;
+    margin: 8px 5px  !important;
+    white-space: nowrap !important;
+    margin-top: 30px !important;
+    
+}
+.discounts {
+    font-size: 1.5rem !important;
+    width: 30% ;
+    height: 6rem ;
+    border-radius: 20px !important;
+    margin: 8px 5px  !important;
+    white-space: nowrap !important;
+    margin-top: 30px !important;
+    
+}
+.discounts {
+    font-size: 1.5rem !important;
+    width: 30% ;
+    height: 6rem ;
+    border-radius: 20px !important;
+    margin: 8px 5px  !important;
+    white-space: nowrap !important;
+    margin-top: 30px !important;
+    
+}
+.vegeterianMenu {
+    font-size: 1.5rem !important;
+    width: 30% ;
+    height: 6rem ;
+    border-radius: 20px !important;
+    margin: 8px 5px  !important;
+    white-space: nowrap !important;
+    margin-top: 30px !important;
+    
+}
+.liveMusic {
+    font-size: 1.5rem !important;
+    width: 30% ;
+    height: 6rem ;
+    border-radius: 20px !important;
+    margin: 8px 5px  !important;
+    white-space: nowrap !important;
+    margin-top: 30px !important;
+    
+}
+.businessLunch {
+    font-size: 1.5rem !important;
+    width: 30% ;
+    height: 6rem ;
+    border-radius: 20px !important;
+    margin: 8px 5px  !important;
+    white-space: nowrap !important;
+    margin-top: 30px !important;
+    
+}
+.alcohol {
+    font-size: 1.5rem !important;
+    width: 30% ;
+    height: 6rem ;
+    border-radius: 20px !important;
+    margin: 8px 5px  !important;
+    white-space: nowrap !important;
+    margin-top: 30px !important;
+    
+}
+.terrace {
+    font-size: 1.5rem !important;
+    width: 30% ;
+    height: 6rem ;
+    border-radius: 20px !important;
+    margin: 8px 5px  !important;
+    white-space: nowrap !important;
+    margin-top: 30px !important;
+    
+}
+.allNight {
+    font-size: 1.5rem !important;
+    width: 30% ;
+    height: 6rem ;
+    border-radius: 20px !important;
+    margin: 8px 5px  !important;
+    white-space: nowrap !important;
+    margin-top: 30px !important;
+    
+} 
+
+.wiFi:after  {
+    content: "\A WiFi";
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-right: 3rem;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%);
+
+ }
+
+ .paymentByCard:after  {
+    content: "\A Card";
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-right: 3rem;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%);
+ }
+
+ .discounts:after  {
+    content: "\A Discounts";
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-right: 3rem;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%);
+ }
+ .vegeterianMenu:after  {
+    content: "\A Vegeterian";
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-right: 3rem;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%);
+ }
+ .liveMusic:after  {
+    content: "\A Music";
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-right: 3rem;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%);
+ }
+ .businessLunch:after  {
+    content: "\A Lunch";
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-right: 3rem;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%);
+ }
+ .alcohol:after  {
+    content: "\A Alcohol";
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-right: 3rem;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%);
+ }
+ .terrace:after  {
+    content: "\A Terracce";
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-right: 3rem;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%);
+ }
+ .allNight:after  {
+    content: "\A 24/7";
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-right: 3rem;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%);
+ }
+
