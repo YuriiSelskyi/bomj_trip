@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
-import {
-  Dropdown,
-  ButtonToolbar,
-  Button,
-} from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FilledInput from '@material-ui/core/FilledInput';
+
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import RestoreIcon from '@material-ui/icons/Restore';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import Select from '@material-ui/core/Select';
 import {
   FaWifi,
   FaCcVisa,
@@ -18,104 +24,181 @@ import {
 import '../styles/filter-for-cafe.css';
 
 export default class FilterForCafe extends Component {
-  state = {
-    wiFi: false,
-    paymentByCard: false,
-    discounts: false,
-    vegeterianMenu: false,
-    liveMusic: false,
-    businessLunch: false,
-    alcohol: false,
-    terrace: false,
-    allNight: false,
-    // confirm: false,
+
+	state = {
+		checkboxButtons: {
+			wiFi: false,
+			paymentByCard: false,
+			discount: false,
+			vegetarianMenu: false,
+			liveMusic: false,
+			businessLunch: false,
+			alcohol: false,
+			terrace: false,
+			allNight: false,
+		},
+		radioButtons: {
+			nearYou: true,
+			cheapest: false,
+			popular: false,
+		}
+	}
+
+  componentDidUpdate(prevProps, prevState) {
+    this.getFilteredInstitution(this.state)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => console.log(err));
   }
-  render () {
+
+  getFilteredInstitution = async (state) => {
+    const response = await fetch('/get-filtered-institution', {
+      method: "post",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(state)
+    });
+    const body = await response.json();
+
+    if (response.status !== 200) {
+      throw Error(body.message) 
+    }
+
+    return body;
+  };
+
+  changeCheckboxButtons = (name) => {
+    const { checkboxButtons } = this.state;
+    this.setState(prevState => ({
+      ...prevState,
+      checkboxButtons: {
+        ...prevState.checkboxButtons,
+        [name]: !checkboxButtons[name],
+      },
+    }));
+  }
+
+  changeRadioButtons = (name) => {
+    this.setState(prevState => ({
+      ...prevState,
+      radioButtons: {
+        nearYou: false,
+        cheapest: false,
+        popular: false,
+        best: false,
+        [name]: true,
+      },
+    }));
+  };
+
+  styles = theme => ({
+    fab: {
+      margin: theme.spacing.unit,
+    },
+    extendedIcon: {
+      marginRight: theme.spacing.unit,
+    },
+  });
+
+  render() {
     return (
       <div>
         <div>
-          <Dropdown>
-            <Dropdown.Toggle
-              variant="success"
-              id="dropdown-basic"
-              className="dropdown"
+          <FormControl variant="filled">
+            <InputLabel htmlFor="filled-age-native-simple">Age</InputLabel>
+            <Select
+              native
+              value={this.state.age}
+              onChange={() => {}}
+              input={<FilledInput name="age" id="filled-age-native-simple" />}
             >
-              TOP 10
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">TOP 5</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">TOP 20</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">TOP 100</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+              <option value="" />
+              <option value={10}>Ten</option>
+              <option value={20}>Twenty</option>
+              <option value={30}>Thirty</option>
+            </Select>
+          </FormControl>
         </div>
         <div>
-          <ButtonToolbar className="radio-button">
-            <Button className="filter" variant="outline-primary">Nearest</Button>
-            <Button className="filter" variant="outline-success">Cheapest</Button>
-            <Button className="filter" variant="outline-danger">Popular</Button>
-            <Button className="filter" variant="outline-info">The best for you</Button>
-          </ButtonToolbar>
+          <BottomNavigation
+            showLabels
+          >
+            <BottomNavigationAction label="Cheapest" icon={<RestoreIcon />} onClick={() => this.changeRadioButtons('cheapest')} />
+            <BottomNavigationAction label="Popular" icon={<FavoriteIcon />} onClick={() => this.changeRadioButtons('popular')} />
+            <BottomNavigationAction label="Nearest" icon={<LocationOnIcon />} onClick={() => this.changeRadioButtons('nearYou')} />
+          </BottomNavigation>
         </div>
         <div>
-          <ButtonToolbar>
+          <div>
             <Button
-              name="wiFi"
-              onClick={() => {this.setState({  wiFi: !this.state.wiFi })}}
+              variant="contained"
+              color="primary"
+              onClick={() => this.changeCheckboxButtons('wiFi')}
             >
               <FaWifi />
             </Button>
             <Button
-              name="paymentByCard"
-              onClick={() => {this.setState({  paymentByCard: !this.state.paymentByCard })}}
+              variant="contained"
+              color="primary"
+              onClick={() => this.changeCheckboxButtons('paymentByCard')}
             >
               <FaCcVisa />
             </Button>
             <Button
-              name="discounts"
-              onClick={() => {this.setState({  discounts: !this.state.discounts })}}
+              variant="contained"
+              color="primary"
+              onClick={() => this.changeCheckboxButtons('discount')}
             >
               <FaPercent />
             </Button>
             <Button
-              name="vegeterianMenu"
-              onClick={() => {this.setState({  vegeterianMenu: !this.state.vegeterianMenu })}}
+              variant="contained"
+              color="primary"
+              onClick={() => this.changeCheckboxButtons('vegetarianMenu')}
             >
               <FaPagelines />
             </Button>
             <Button
-              name="liveMusic"
-              onClick={() => {this.setState({  liveMusic: !this.state.liveMusic })}}
+              variant="contained"
+              color="primary"
+              onClick={() => this.changeCheckboxButtons('liveMusic')}
             >
               <FaMusic />
             </Button>
             <Button
-              name="businessLunch"
-              onClick={() => {this.setState({  businessLunch: !this.state.businessLunch })}}
+              variant="contained"
+              color="primary"
+              onClick={() => this.changeCheckboxButtons('businessLunch')}
             >
               <FaCoffee />
             </Button>
             <Button
-              name="alcohol"
-              onClick={() => {this.setState({  alcohol: !this.state.alcohol })}}
+              variant="contained"
+              color="primary"
+              onClick={() => this.changeCheckboxButtons('alcohol')}
             >
               <FaGlassMartini />
             </Button>
             <Button
-              name="terrace"
-              onClick={() => {this.setState({  terrace: !this.state.terrace })}}
+              variant="contained"
+              color="primary"
+              onClick={() => this.changeCheckboxButtons('terrace')}
             >
               <FaTree />
             </Button>
             <Button
-              name="allNight"
-              onClick={() => {this.setState({  allNight: !this.state.allNight })}}
+              variant="contained"
+              color="primary"
+              onClick={() => this.changeCheckboxButtons('allNight')}
             >
               <FaClock />
             </Button>
-          </ButtonToolbar>
+          </div>
         </div>
       </div>
     );
-  }
+	}
 }
