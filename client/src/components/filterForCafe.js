@@ -106,7 +106,12 @@ export default class FilterForCafe extends Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD
         <div className = "radio-button">
+=======
+
+        <div class = "radio-button">
+>>>>>>> 7590784227266b807928a71e26146d7102f47bf6
           <BottomNavigation
             showLabels
           >
@@ -119,7 +124,6 @@ export default class FilterForCafe extends Component {
             <Button
               className = "wiFi"
               variant="contained"
-              color="primary"
               onClick={() => this.changeCheckboxButtons('wiFi')}
             >
               <FaWifi /> 
@@ -127,7 +131,6 @@ export default class FilterForCafe extends Component {
             <Button
               className = "paymentByCard"
               variant="contained"
-              color="primary"
               onClick={() => this.changeCheckboxButtons('paymentByCard')}
             >
               <FaCcVisa />
@@ -138,7 +141,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('discount')}
             >
-              <FaPercent />
+              <FaPercent color="black" />
             </Button>
             <Button
               className = "vegeterianMenu"
@@ -146,7 +149,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('vegetarianMenu')}
             >
-              <FaPagelines />
+              <FaPagelines color="black" />
             </Button>
             <Button
               className = "liveMusic"
@@ -154,7 +157,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('liveMusic')}
             >
-              <FaMusic />
+              <FaMusic color="black" />
             </Button>
             <Button
               className = "businessLunch"
@@ -162,7 +165,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('businessLunch')}
             >
-              <FaCoffee />
+              <FaCoffee color="black" />
             </Button>
             <Button
               className = "alcohol"
@@ -170,7 +173,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('alcohol')}
             >
-              <FaGlassMartini />
+              <FaGlassMartini color="black" />
             </Button>
             <Button
               className = "terrace"
@@ -178,7 +181,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('terrace')}
             >
-              <FaTree />
+              <FaTree color="black" />
             </Button>
             <Button
               className = "allNight"
@@ -186,7 +189,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('allNight')}
             >
-              <FaClock />
+              <FaClock color="black" />
             </Button>
         </div>
       </div>

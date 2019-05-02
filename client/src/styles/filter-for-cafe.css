@@ -1,14 +1,18 @@
-.dropDown {
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 2rem;
+.MuiBottomNavigation-root-1 {
+    background: transparent !important;  
 }
 
+<<<<<<< HEAD
 .filter {
     border-bottom-width: 4px !important; 
     border-bottom-style: groove !important; 
     border-bottom-color: pink !important;
 }
+=======
+/* .filter {
+    
+} */
+>>>>>>> 7590784227266b807928a71e26146d7102f47bf6
 
 .cheak-box {
     display: flex;
@@ -18,108 +22,112 @@
 
 .wiFi {
     font-size: 1.5rem !important;
-    width: 30% ;
-    height: 6rem ;
+    width: 10% ;
+    height: 4rem ;
     border-radius: 20px !important;
-    margin: 8px 5px  !important;
+    margin: 7% !important;
+    margin-left: 10% !important;
     white-space: nowrap !important;
     margin-top: 30px !important;
+    background-color: rgb(147, 149, 235) !important;
     
 }
 .paymentByCard {
     font-size: 1.5rem !important;
-    width: 30% ;
-    height: 6rem ;
+    width: 10% ;
+    height: 4rem ;
     border-radius: 20px !important;
-    margin: 8px 5px  !important;
+    margin: 7% !important;
     white-space: nowrap !important;
     margin-top: 30px !important;
-    
+    background-color: rgb(147, 149, 235) !important;
 }
+
 .discounts {
     font-size: 1.5rem !important;
-    width: 30% ;
-    height: 6rem ;
+    width: 10% ;
+    height: 4rem ;
     border-radius: 20px !important;
-    margin: 8px 5px  !important;
+    margin: 7%  !important;
     white-space: nowrap !important;
     margin-top: 30px !important;
-    
-}
-.discounts {
-    font-size: 1.5rem !important;
-    width: 30% ;
-    height: 6rem ;
-    border-radius: 20px !important;
-    margin: 8px 5px  !important;
-    white-space: nowrap !important;
-    margin-top: 30px !important;
+    background-color: rgb(147, 149, 235) !important;
     
 }
 .vegeterianMenu {
     font-size: 1.5rem !important;
-    width: 30% ;
-    height: 6rem ;
+    width: 10% ;
+    height: 4rem ;
     border-radius: 20px !important;
-    margin: 8px 5px  !important;
+    margin: 7%  !important;
+    margin-left: 10% !important;
     white-space: nowrap !important;
     margin-top: 30px !important;
+    background-color: rgb(147, 149, 235) !important;
     
 }
 .liveMusic {
     font-size: 1.5rem !important;
-    width: 30% ;
-    height: 6rem ;
+    width: 10% ;
+    height: 4rem ;
     border-radius: 20px !important;
-    margin: 8px 5px  !important;
+    margin: 7%  !important;
     white-space: nowrap !important;
     margin-top: 30px !important;
+    background-color: rgb(147, 149, 235) !important;
     
 }
 .businessLunch {
     font-size: 1.5rem !important;
-    width: 30% ;
-    height: 6rem ;
+    width: 10% ;
+    height: 4rem ;
     border-radius: 20px !important;
-    margin: 8px 5px  !important;
+    margin: 7% !important;
     white-space: nowrap !important;
     margin-top: 30px !important;
+    background-color: rgb(147, 149, 235) !important;
     
 }
 .alcohol {
     font-size: 1.5rem !important;
-    width: 30% ;
-    height: 6rem ;
+    width: 10% ;
+    height: 4rem ;
     border-radius: 20px !important;
-    margin: 8px 5px  !important;
+    margin: 7%  !important;
+    margin-left: 10% !important;
     white-space: nowrap !important;
     margin-top: 30px !important;
+    background-color: rgb(147, 149, 235) !important;
     
 }
 .terrace {
     font-size: 1.5rem !important;
-    width: 30% ;
-    height: 6rem ;
+    width: 10% ;
+    height: 4rem ;
     border-radius: 20px !important;
-    margin: 8px 5px  !important;
+    margin: 7%  !important;
     white-space: nowrap !important;
     margin-top: 30px !important;
+    background-color: rgb(147, 149, 235) !important;
     
 }
+
 .allNight {
     font-size: 1.5rem !important;
-    width: 30% ;
-    height: 6rem ;
+    width: 10% ;
+    height: 4rem ;
     border-radius: 20px !important;
-    margin: 8px 5px  !important;
+    margin: 7%  !important;
     white-space: nowrap !important;
     margin-top: 30px !important;
+    background-color: rgb(147, 149, 235) !important;
     
 } 
 
 .wiFi:after  {
-    content: "\A WiFi";
+    content: "\A\A WiFi";
     white-space: pre-wrap;
+    color: black;
     font-size: 1rem;
     margin-right: 3rem;
     position: absolute;               
@@ -129,7 +137,7 @@
  }
 
  .paymentByCard:after  {
-    content: "\A Card";
+    content: "\A\A Card";
     white-space: pre-wrap;
     font-size: 1rem;
     margin-right: 3rem;
@@ -139,8 +147,9 @@
  }
 
  .discounts:after  {
-    content: "\A Discounts";
+    content: "\A\A Discounts";
     white-space: pre-wrap;
+    color: black;
     font-size: 1rem;
     margin-right: 3rem;
     position: absolute;               
@@ -148,8 +157,9 @@
     transform: translate(0, -50%);
  }
  .vegeterianMenu:after  {
-    content: "\A Vegeterian";
+    content: "\A\A Vegeterian";
     white-space: pre-wrap;
+    color: black;
     font-size: 1rem;
     margin-right: 3rem;
     position: absolute;               
@@ -157,8 +167,9 @@
     transform: translate(0, -50%);
  }
  .liveMusic:after  {
-    content: "\A Music";
+    content: "\A\A Music";
     white-space: pre-wrap;
+    color: black;
     font-size: 1rem;
     margin-right: 3rem;
     position: absolute;               
@@ -166,8 +177,9 @@
     transform: translate(0, -50%);
  }
  .businessLunch:after  {
-    content: "\A Lunch";
+    content: "\A\A Lunch";
     white-space: pre-wrap;
+    color: black;
     font-size: 1rem;
     margin-right: 3rem;
     position: absolute;               
@@ -175,8 +187,9 @@
     transform: translate(0, -50%);
  }
  .alcohol:after  {
-    content: "\A Alcohol";
+    content: "\A\A Alcohol";
     white-space: pre-wrap;
+    color: black;
     font-size: 1rem;
     margin-right: 3rem;
     position: absolute;               
@@ -184,8 +197,9 @@
     transform: translate(0, -50%);
  }
  .terrace:after  {
-    content: "\A Terracce";
+    content: "\A\A Terracce";
     white-space: pre-wrap;
+    color: black;
     font-size: 1rem;
     margin-right: 3rem;
     position: absolute;               
@@ -193,8 +207,9 @@
     transform: translate(0, -50%);
  }
  .allNight:after  {
-    content: "\A 24/7";
+    content: "\A\A 24/7";
     white-space: pre-wrap;
+    color: black;
     font-size: 1rem;
     margin-right: 3rem;
     position: absolute;               
