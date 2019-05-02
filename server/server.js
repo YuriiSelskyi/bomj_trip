@@ -12,6 +12,16 @@ app.use(bodyParser.json())
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
+app.post('/get-all-institutions', (req, res) => {
+
+	Cafes.findAll({
+		raw: true
+	})
+	.then((cafes) => {
+		res.send({ data: cafes });
+	});
+});
+
 app.post('/get-filtered-institution', (req, res) => {
 	let filter = Object.assign({}, req.body.checkboxButtons, req.body.radioButtons);
 
