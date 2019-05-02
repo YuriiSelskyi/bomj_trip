@@ -38,7 +38,14 @@ export default class Advertising extends React.Component {
     } = this.state;
 
     return (
-      <ItemsCarousel
+      <div>
+        <p>fasdfasd</p>
+        <p>fasdfasd</p>
+        <p>fasdfasd</p>
+        <p>fasdfasd</p>
+        <p>fasdfasd</p>
+        <p>fasdfasd</p>
+      {/* <ItemsCarousel
         // Placeholder configurations
         enablePlaceholder
         numberOfPlaceholderItems={10}
@@ -63,7 +70,8 @@ export default class Advertising extends React.Component {
         outsideChevron={false}
       >
         {children}
-      </ItemsCarousel>
+      </ItemsCarousel> */}
+      </div>
     );  
   }
 } 

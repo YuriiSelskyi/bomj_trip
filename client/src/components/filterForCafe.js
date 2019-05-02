@@ -106,22 +106,6 @@ export default class FilterForCafe extends Component {
   render() {
     return (
       <div>
-        <div>
-          <FormControl variant="filled" className = "dropDown">
-            <InputLabel htmlFor="filled-age-native-simple" ><div className = "dropDown"> TOP </div> </InputLabel>
-            <Select
-              native
-              value={this.state.age}
-              onChange={() => {}}
-              input={<FilledInput name="TOP" id="filled-age-native-simple" />}
-            >
-              <option value="" />
-              <option value={10}>Top 10</option>
-              <option value={20}>Top 50</option>
-              <option value={30}>Top 100</option>
-            </Select>
-          </FormControl>
-        </div>
         <div className = "radio-button">
           <BottomNavigation
             showLabels
