@@ -2,16 +2,33 @@
     background: transparent !important;  
 }
 
-
 .filter {
+    margin-bottom: 2%;
+    margin-top: 2%;
+    font-size: 48px !important;
+}
+
+.radio-button{
     border-bottom-width: 6px !important; 
     border-bottom-style: groove !important; 
-    border-bottom-color: pink !important;
+    border-bottom-color: blue !important; 
+    padding-bottom: 7%;
 }
-.cheak-box {
+
+.MuiBottomNavigationAction-label-6{
+    font-size: 0.9rem !important;
+}
+.MuiBottomNavigationAction-root-2{
+    color:rgb(83, 82, 150) !important;
+}
+/* .chek-box {
     display: flex;
     justify-content: space-around !important;
     
+} */
+
+.check-box{
+    /* margin-top: 10%; */
 }
 
 .wiFi {

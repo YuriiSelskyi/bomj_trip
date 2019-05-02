@@ -3,12 +3,12 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-
+  
 }
 
 .card {
   margin: 20px 25px;
-  width: 400px
+  width: 360px
 }
 
 .icons {
