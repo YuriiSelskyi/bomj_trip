@@ -24,27 +24,51 @@ import {
 import '../styles/filter-for-cafe.css';
 
 export default class FilterForCafe extends Component {
-  state = {
-    // TODO: change data state
-    checkboxButtons: {
-      wiFi: false,
-      paymentByCard: false,
-      discounts: false,
-      vegeterianMenu: false,
-      liveMusic: false,
-      businessLunch: false,
-      alcohol: false,
-      terrace: false,
-      allNight: false,
-    },
-    radioButtons: {
-      nearYou: true,
-      chipest: false,
-      popular: false,
-      best: false,
-    },
-    // confirm: false,
+
+	state = {
+		checkboxButtons: {
+			wiFi: false,
+			paymentByCard: false,
+			discount: false,
+			vegetarianMenu: false,
+			liveMusic: false,
+			businessLunch: false,
+			alcohol: false,
+			terrace: false,
+			allNight: false,
+		},
+		radioButtons: {
+			nearYou: true,
+			cheapest: false,
+			popular: false,
+		}
+	}
+
+  componentDidUpdate(prevProps, prevState) {
+    this.getFilteredInstitution(this.state)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => console.log(err));
   }
+
+  getFilteredInstitution = async (state) => {
+    const response = await fetch('/get-filtered-institution', {
+      method: "post",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(state)
+    });
+    const body = await response.json();
+
+    if (response.status !== 200) {
+      throw Error(body.message) 
+    }
+
+    return body;
+  };
 
   changeCheckboxButtons = (name) => {
     const { checkboxButtons } = this.state;
@@ -62,7 +86,7 @@ export default class FilterForCafe extends Component {
       ...prevState,
       radioButtons: {
         nearYou: false,
-        chipest: false,
+        cheapest: false,
         popular: false,
         best: false,
         [name]: true,
@@ -79,8 +103,7 @@ export default class FilterForCafe extends Component {
     },
   });
 
-  render () {
-    console.log(this.state);
+  render() {
     return (
       <div>
         <div>
@@ -103,7 +126,7 @@ export default class FilterForCafe extends Component {
           <BottomNavigation
             showLabels
           >
-            <BottomNavigationAction label="Cheapest" icon={<RestoreIcon />} onClick={() => this.changeRadioButtons('chipest')} />
+            <BottomNavigationAction label="Cheapest" icon={<RestoreIcon />} onClick={() => this.changeRadioButtons('cheapest')} />
             <BottomNavigationAction label="Popular" icon={<FavoriteIcon />} onClick={() => this.changeRadioButtons('popular')} />
             <BottomNavigationAction label="Nearest" icon={<LocationOnIcon />} onClick={() => this.changeRadioButtons('nearYou')} />
           </BottomNavigation>
@@ -113,63 +136,63 @@ export default class FilterForCafe extends Component {
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('wiFi')}
+              onClick={() => this.changeCheckboxButtons('wiFi')}
             >
               <FaWifi />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('paymentByCard')}
+              onClick={() => this.changeCheckboxButtons('paymentByCard')}
             >
               <FaCcVisa />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('discounts')}
+              onClick={() => this.changeCheckboxButtons('discount')}
             >
               <FaPercent />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('vegeterianMenu')}
+              onClick={() => this.changeCheckboxButtons('vegetarianMenu')}
             >
               <FaPagelines />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('liveMusic')}
+              onClick={() => this.changeCheckboxButtons('liveMusic')}
             >
               <FaMusic />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('businessLunch')}
+              onClick={() => this.changeCheckboxButtons('businessLunch')}
             >
               <FaCoffee />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('alcohol')}
+              onClick={() => this.changeCheckboxButtons('alcohol')}
             >
               <FaGlassMartini />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('terrace')}
+              onClick={() => this.changeCheckboxButtons('terrace')}
             >
               <FaTree />
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onPress={() => this.changeCheckboxButtons('allNight')}
+              onClick={() => this.changeCheckboxButtons('allNight')}
             >
               <FaClock />
             </Button>
@@ -177,5 +200,5 @@ export default class FilterForCafe extends Component {
         </div>
       </div>
     );
-  }
+	}
 }
