@@ -99,7 +99,7 @@ export default class FilterForCafe extends Component {
 
   render() {
     return (
-      <div>
+      <div >
         <div className = "radio-button">
           <BottomNavigation
             showLabels
@@ -183,6 +183,7 @@ export default class FilterForCafe extends Component {
               <FaClock color="black" />
             </Button>
         </div>
+        <Button className="button">Refresh</Button>
       </div>
     );
 	}
