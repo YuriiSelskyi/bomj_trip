@@ -6,45 +6,48 @@ import CafeList from './CafeList';
 import '../styles/main.css';
 class App extends Component {
   state = {
-    data: 'Hello'
+    cafes: null
+	};
+	
+	componentDidMount() {
+		this.getAllInstitutions()
+      .then(res => {
+        this.setState({
+					cafes: res.data,
+				});
+      })
+      .catch(err => console.log(err));
+	}
+
+	getAllInstitutions = async () => {
+    const response = await fetch('/get-all-institutions', {
+      method: "post",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
+    const body = await response.json();
+
+    if (response.status !== 200) {
+      throw Error(body.message) 
+    }
+
+    return body;
+	};
+	
+	changeStateCafes = (data) => {
+		console.log(data);
+    this.setState({
+			cafes: data.data,
+		});
   };
 
   render () {
-		const list = [
-			{
-				name: 'Pizza house',
-				address: 'dfgdf',
-				middleCheck: 200,
-				actions: 'asdasdasdas',
-				workingHours: '07.30 - 00.00',
-				popular: 4,
-			},
-			{
-				name: 'Білий Лев',
-				address: '21345ytuhgf',
-				middleCheck: 300,
-				actions: 'asdasdasdas',
-				workingHours: '08.30 - 00.00',
-				popular: 3,
-			},
-			{
-				name: 'Корки і крихти',
-				address: '4352345',
-				middleCheck: 400,
-				actions: 'asdasdasdas',
-				workingHours: '04.30 - 00.00',
-				popular: 2,
-			},
-			{
-				name: 'Port wine bar',
-				address: '21345ytasgf',
-				middleCheck: 500,
-				actions: 'asdasdasdas',
-				workingHours: '07.30 - 00.00',
-				popular: 5,
-			},
-		];
-
+		const { cafes } = this.state;
+		if(cafes === null) {
+			return (<div>...loading</div>)
+		}
     return (
       <div>
         <div className="advertising">
@@ -52,11 +55,10 @@ class App extends Component {
         </div>
         <div className="main">
           <div className="menu">
-            <FilterForCafe />
+            <FilterForCafe changeStateCafes={this.changeStateCafes} />
           </div>
           <div className="cafe-list">
-            <CafeList list={list} />
-            <p>{this.state.data[0].testTablecol}</p>
+            <CafeList list={cafes} />
           </div>
         </div>
       </div>

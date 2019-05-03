@@ -69,6 +69,10 @@ var cafes = connection.define('cafes', {
 	popular: {
 		type: sequelize.TINYINT(1),
 		allowNull: false
+	},
+	rating: {
+		type: sequelize.TINYINT(1),
+		allowNull: false
 	}
 });
 
