@@ -37,7 +37,7 @@ export default class FilterForCafe extends Component {
 			cheapest: false,
 			popular: false,
 		}
-	}
+  }
 
   getFilteredCafe = (state) => {
     this.getFilteredInstitution(state)
@@ -115,14 +115,14 @@ export default class FilterForCafe extends Component {
               variant="contained"
               onClick={() => this.changeCheckboxButtons('wiFi')}
             >
-              <FaWifi /> 
+              <FaWifi color="white" /> 
             </Button>
             <Button
               className = "paymentByCard"
               variant="contained"
               onClick={() => this.changeCheckboxButtons('paymentByCard')}
             >
-              <FaCcVisa />
+              <FaCcVisa color="white" />
             </Button>
             <Button
               className = "discounts"
@@ -130,7 +130,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('discount')}
             >
-              <FaPercent color="black" />
+              <FaPercent color="white" />
             </Button>
             <Button
               className = "vegeterianMenu"
@@ -138,7 +138,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('vegetarianMenu')}
             >
-              <FaPagelines color="black" />
+              <FaPagelines color="white" />
             </Button>
             <Button
               className = "liveMusic"
@@ -146,7 +146,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('liveMusic')}
             >
-              <FaMusic color="black" />
+              <FaMusic color="white" />
             </Button>
             <Button
               className = "businessLunch"
@@ -154,7 +154,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('businessLunch')}
             >
-              <FaCoffee color="black" />
+              <FaCoffee color="white" />
             </Button>
             <Button
               className = "alcohol"
@@ -162,7 +162,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('alcohol')}
             >
-              <FaGlassMartini color="black" />
+              <FaGlassMartini color="white" />
             </Button>
             <Button
               className = "terrace"
@@ -170,7 +170,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('terrace')}
             >
-              <FaTree color="black" />
+              <FaTree color="white" />
             </Button>
             <Button
               className = "allNight"
@@ -178,7 +178,7 @@ export default class FilterForCafe extends Component {
               color="primary"
               onClick={() => this.changeCheckboxButtons('allNight')}
             >
-              <FaClock color="black" />
+              <FaClock color="white" />
             </Button>
         </div>
       </div>

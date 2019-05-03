@@ -31,3 +31,31 @@
     justify-content: center;
     margin-top: 22%;
 }
+
+.plus-button {
+    width: 10%;
+    position: sticky;
+    bottom: 30px;
+    margin-left: 90%;
+    /* left: 20px; */
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-popup {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-information {
+    margin-top: 8px !important;
+}
+
+.list {
+    display: flex !important;
+    justify-content: space-around !important;
+    margin-top: 35px !important;
+}
