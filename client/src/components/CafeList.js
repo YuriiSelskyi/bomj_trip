@@ -16,19 +16,19 @@ import '../styles/cafe-list.css';
 export default class CafeList extends Component {
   state = {
     redirect: false,
-    indexElement: null,
+    id: null,
   };
 
   redirect = (index) => {
     this.setState({
       redirect: true,
-      indexElement: index,
+      id: index,
     })
   }
   
   renderStars = (index) => {
     const { list } = this.props;
-    return [...Array(list[index].popular)].map((e, i) => <FaStar key={i}/>);
+    return [...Array(list[index].rating)].map((e, i) => <FaStar key={i}/>);
   }
 
   renderCafeList = () => {
@@ -44,11 +44,11 @@ export default class CafeList extends Component {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                {item.name}
+                {item.title}
               </Typography>
-              <Typography component="p">
+              <Typography component="div">
                 <div className="icons"><div>{this.renderStars(index)}</div><div><FaClock /> {item.workingHours}</div></div>
-                <p><FaMapMarker /> {item.address}</p>
+                <div><FaMapMarker /> {item.address}</div>
                 Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                 across all continents except Antarctica
               </Typography>
@@ -58,7 +58,7 @@ export default class CafeList extends Component {
             <Button size="small" color="primary">
               Share
             </Button>
-            <Button size="small" color="primary" onClick={() => this.redirect(index)}>
+            <Button size="small" color="primary" onClick={() => this.redirect(item.id)}>
               Learn More
             </Button>
           </CardActions>
@@ -67,15 +67,20 @@ export default class CafeList extends Component {
   };
 
   render () {
-    const { redirect, indexElement } = this.state;
+    const { redirect, id } = this.state;
     const { list } = this.props;
     if(redirect) {
-      return <Redirect to='/cafe-details' />
+      return <Redirect to={{
+        pathname: '/cafe-details',
+        data: {
+          list,
+          id,
+        }
+      }} />
     }
 
     return (
       <div className="list">
-        {/* <Route path="/" exact component={HomePage} /> */}
         {this.renderCafeList()}
       </div>
     );

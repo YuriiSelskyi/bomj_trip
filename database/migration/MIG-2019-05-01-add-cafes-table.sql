@@ -22,3 +22,5 @@ ALTER TABLE `cafes`
 ADD COLUMN `nearYou` TINYINT(1) NOT NULL AFTER `allNight`,
 ADD COLUMN `cheapest` TINYINT(1) NOT NULL AFTER `nearYou`,
 ADD COLUMN `popular` TINYINT(1) NOT NULL AFTER `cheapest`;
+ALTER TABLE `cafes` 
+ADD COLUMN `rating` TINYINT(1) NOT NULL DEFAULT 1 AFTER `popular`;
