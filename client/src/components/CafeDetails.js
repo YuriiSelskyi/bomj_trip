@@ -59,7 +59,7 @@ class CafeDetails extends Component {
                 {element.title}
                 </Typography>
                 <Typography component="div">
-                  <div className="icons">
+                  <div className="iconse">
                     <div>
                       Rate
                       {this.renderStars(element.rating)}

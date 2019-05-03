@@ -2,6 +2,11 @@
     background: transparent !important;  
 }
 
+.check-box {
+    display: flex;
+    justify-content: space-around;
+}
+
 .filter {
     margin-bottom: 2%;
     margin-top: 2%;
@@ -30,7 +35,7 @@
     width: 10% ;
     height: 4rem ;
     border-radius: 20px !important;
-    margin: 7% !important;
+    margin: 5% !important;
     white-space: nowrap !important;
     margin-top: 30px !important;
     background-color: rgb(147, 149, 235) !important;
@@ -40,7 +45,7 @@
 
 
 .different-cheak-box{
-    margin-left: 10% !important;
+    /* margin: 8% !important; */
 }
 .common-style-for-cheak-box:after{
     
@@ -93,6 +98,10 @@
     background-color: rgb(167, 157, 230) !important;
     border-radius: 15px !important;
     box-shadow: 6px 6px 6px #999;
-    margin-top: 10% !important;
-    margin-left: 30% !important;
+    margin-top: 15% !important;
+}
+
+.refresh {
+    display: flex;
+    justify-content: center;
 }
