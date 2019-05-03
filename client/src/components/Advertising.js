@@ -59,17 +59,17 @@ export default class Advertising extends React.Component {
         minimumPlaceholderTime={1000}
         placeholderItem={<div style={{ height: 200 }}>Placeholder</div>}
 
-        // Carousel configurations
-        numberOfCards={3}
-        gutter={1}
-        showSlither={true}
-        firstAndLastGutter={true}
-        freeScrolling={false}
+      // Carousel configurations
+      numberOfCards={3}
+      gutter={1}
+      showSlither={true}
+      firstAndLastGutter={true}
+      freeScrolling={false}
 
-        // Active item configurations
-        requestToChangeActive={this.changeActiveItem}
-        activeItemIndex={activeItemIndex}
-        activePosition={'center'}
+      // Active item configurations
+      requestToChangeActive={this.changeActiveItem}
+      activeItemIndex={activeItemIndex}
+      activePosition={'center'}
 
         chevronWidth={24}
         rightChevron={'>'}

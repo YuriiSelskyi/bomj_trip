@@ -11,15 +11,15 @@
 
 .menu {
     position: sticky;
-    top: 0;
+    top: 5%;
     width: 380px;
-    height: 500px;
-    margin-left: 20px;
+    height: 550px;
+    margin-left: 3%;
     padding: 10px;
     border: 2px double black;
     border-radius: 50px;
     min-width: 250px;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 10px  rgba(0,0,0,0.5);
 }
 
 .cafe-list {

@@ -99,7 +99,7 @@ export default class FilterForCafe extends Component {
 
   render() {
     return (
-      <div>
+      <div >
         <div className = "radio-button">
           <BottomNavigation
             showLabels
@@ -111,37 +111,39 @@ export default class FilterForCafe extends Component {
         </div>
         <div className = "check-box">
             <Button
-              className = "wiFi"
+              className = "common-style-for-cheak-box wiFi different-cheak-box"
+              
+
               variant="contained"
               onClick={() => this.changeCheckboxButtons('wiFi')}
             >
               <FaWifi color="white" /> 
             </Button>
             <Button
-              className = "paymentByCard"
+              className = "common-style-for-cheak-box paymentByCard"
               variant="contained"
               onClick={() => this.changeCheckboxButtons('paymentByCard')}
             >
               <FaCcVisa color="white" />
             </Button>
             <Button
-              className = "discounts"
+              className = "common-style-for-cheak-box discounts "
               variant="contained"
               color="primary"
-              onClick={() => this.changeCheckboxButtons('discount')}
+              onClick={() => this.changeCheckboxButtons('discounts')}
             >
               <FaPercent color="white" />
             </Button>
             <Button
-              className = "vegeterianMenu"
+              className = "common-style-for-cheak-box vegeterianMenu different-cheak-box"
               variant="contained"
               color="primary"
-              onClick={() => this.changeCheckboxButtons('vegetarianMenu')}
+              onClick={() => this.changeCheckboxButtons('vegeterianMenu')}
             >
               <FaPagelines color="white" />
             </Button>
             <Button
-              className = "liveMusic"
+              className = "common-style-for-cheak-box liveMusic"
               variant="contained"
               color="primary"
               onClick={() => this.changeCheckboxButtons('liveMusic')}
@@ -149,7 +151,7 @@ export default class FilterForCafe extends Component {
               <FaMusic color="white" />
             </Button>
             <Button
-              className = "businessLunch"
+              className = "common-style-for-cheak-box businessLunch"
               variant="contained"
               color="primary"
               onClick={() => this.changeCheckboxButtons('businessLunch')}
@@ -157,7 +159,7 @@ export default class FilterForCafe extends Component {
               <FaCoffee color="white" />
             </Button>
             <Button
-              className = "alcohol"
+              className = "common-style-for-cheak-box alcohol different-cheak-box"
               variant="contained"
               color="primary"
               onClick={() => this.changeCheckboxButtons('alcohol')}
@@ -165,7 +167,7 @@ export default class FilterForCafe extends Component {
               <FaGlassMartini color="white" />
             </Button>
             <Button
-              className = "terrace"
+              className = "common-style-for-cheak-box terrace"
               variant="contained"
               color="primary"
               onClick={() => this.changeCheckboxButtons('terrace')}
@@ -173,7 +175,7 @@ export default class FilterForCafe extends Component {
               <FaTree color="white" />
             </Button>
             <Button
-              className = "allNight"
+              className = "common-style-for-cheak-box allNight"
               variant="contained"
               color="primary"
               onClick={() => this.changeCheckboxButtons('allNight')}
@@ -181,6 +183,7 @@ export default class FilterForCafe extends Component {
               <FaClock color="white" />
             </Button>
         </div>
+        <Button className="button">Refresh</Button>
       </div>
     );
 	}

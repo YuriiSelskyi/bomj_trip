@@ -5,7 +5,7 @@
 .filter {
     margin-bottom: 2%;
     margin-top: 2%;
-    font-size: 48px !important;
+    font-size: 48px !important;  
 }
 
 .radio-button{
@@ -17,34 +17,16 @@
 
 .MuiBottomNavigationAction-label-6{
     font-size: 0.9rem !important;
+    
 }
 .MuiBottomNavigationAction-root-2{
     color:rgb(83, 82, 150) !important;
-}
-/* .chek-box {
-    display: flex;
-    justify-content: space-around !important;
-    
-} */
-
-.check-box{
-    /* margin-top: 10%; */
-}
-
-.wiFi {
-    font-size: 1.5rem !important;
-    width: 10% ;
-    height: 4rem ;
-    border-radius: 20px !important;
-    margin: 7% !important;
-    margin-left: 10% !important;
-    white-space: nowrap !important;
-    margin-top: 30px !important;
-    background-color: rgb(147, 149, 235) !important;
     
 }
-.paymentByCard {
+
+.common-style-for-cheak-box{
     font-size: 1.5rem !important;
+    font-family: cursive !important;
     width: 10% ;
     height: 4rem ;
     border-radius: 20px !important;
@@ -52,179 +34,65 @@
     white-space: nowrap !important;
     margin-top: 30px !important;
     background-color: rgb(147, 149, 235) !important;
-}
-
-.discounts {
-    font-size: 1.5rem !important;
-    width: 10% ;
-    height: 4rem ;
-    border-radius: 20px !important;
-    margin: 7%  !important;
-    white-space: nowrap !important;
-    margin-top: 30px !important;
-    background-color: rgb(147, 149, 235) !important;
-    
-}
-.vegeterianMenu {
-    font-size: 1.5rem !important;
-    width: 10% ;
-    height: 4rem ;
-    border-radius: 20px !important;
-    margin: 7%  !important;
-    margin-left: 10% !important;
-    white-space: nowrap !important;
-    margin-top: 30px !important;
-    background-color: rgb(147, 149, 235) !important;
-    
-}
-.liveMusic {
-    font-size: 1.5rem !important;
-    width: 10% ;
-    height: 4rem ;
-    border-radius: 20px !important;
-    margin: 7%  !important;
-    white-space: nowrap !important;
-    margin-top: 30px !important;
-    background-color: rgb(147, 149, 235) !important;
-    
-}
-.businessLunch {
-    font-size: 1.5rem !important;
-    width: 10% ;
-    height: 4rem ;
-    border-radius: 20px !important;
-    margin: 7% !important;
-    white-space: nowrap !important;
-    margin-top: 30px !important;
-    background-color: rgb(147, 149, 235) !important;
-    
-}
-.alcohol {
-    font-size: 1.5rem !important;
-    width: 10% ;
-    height: 4rem ;
-    border-radius: 20px !important;
-    margin: 7%  !important;
-    margin-left: 10% !important;
-    white-space: nowrap !important;
-    margin-top: 30px !important;
-    background-color: rgb(147, 149, 235) !important;
-    
-}
-.terrace {
-    font-size: 1.5rem !important;
-    width: 10% ;
-    height: 4rem ;
-    border-radius: 20px !important;
-    margin: 7%  !important;
-    white-space: nowrap !important;
-    margin-top: 30px !important;
-    background-color: rgb(147, 149, 235) !important;
+    box-shadow:  6px 6px 6px  rgba(240, 6, 6, 0.5) !important;
     
 }
 
-.allNight {
-    font-size: 1.5rem !important;
-    width: 10% ;
-    height: 4rem ;
-    border-radius: 20px !important;
-    margin: 7%  !important;
-    white-space: nowrap !important;
-    margin-top: 30px !important;
-    background-color: rgb(147, 149, 235) !important;
+
+.different-cheak-box{
+    margin-left: 10% !important;
+}
+.common-style-for-cheak-box:after{
     
-} 
+    white-space: pre-wrap;
+    color: black;
+    font-size: 1rem;
+    margin-right: 3rem;
+    position: absolute;               
+    top: 50%;                         
+    transform: translate(0, -50%);
+}
 
 .wiFi:after  {
     content: "\A\A\A WiFi";
-    white-space: pre-wrap;
-    color: black;
-    font-size: 1rem;
-    margin-right: 3rem;
-    position: absolute;               
-    top: 50%;                         
-    transform: translate(0, -50%);
-
  }
 
  .paymentByCard:after  {
-    content: "\A\A\A Card";
-    white-space: pre-wrap;
-    font-size: 1rem;
-    margin-right: 3rem;
-    position: absolute;               
-    top: 50%;                         
-    transform: translate(0, -50%);
+    content: "\A\A\A Card";    
  }
 
  .discounts:after  {
-    content: "\A\A\A Discounts";
-    white-space: pre-wrap;
-    color: black;
-    font-size: 1rem;
-    margin-right: 3rem;
-    position: absolute;               
-    top: 50%;                         
-    transform: translate(0, -50%);
+    content: "\A\A\A Discounts";   
  }
  .vegeterianMenu:after  {
-    content: "\A\A\A Vegeterian";
-    white-space: pre-wrap;
-    color: black;
-    font-size: 1rem;
-    margin-right: 3rem;
-    position: absolute;               
-    top: 50%;                         
-    transform: translate(0, -50%);
+    content: "\A\A\A Vegeterian";  
  }
  .liveMusic:after  {
-    content: "\A\A\A Music";
-    white-space: pre-wrap;
-    color: black;
-    font-size: 1rem;
-    margin-right: 3rem;
-    position: absolute;               
-    top: 50%;                         
-    transform: translate(0, -50%);
+    content: "\A\A\A Music";   
  }
  .businessLunch:after  {
-    content: "\A\A\A Lunch";
-    white-space: pre-wrap;
-    color: black;
-    font-size: 1rem;
-    margin-right: 3rem;
-    position: absolute;               
-    top: 50%;                         
-    transform: translate(0, -50%);
+    content: "\A\A\A Lunch";  
  }
  .alcohol:after  {
     content: "\A\A\A Alcohol";
-    white-space: pre-wrap;
-    color: black;
-    font-size: 1rem;
-    margin-right: 3rem;
-    position: absolute;               
-    top: 50%;                         
-    transform: translate(0, -50%);
  }
  .terrace:after  {
-    content: "\A\A\A Terracce";
-    white-space: pre-wrap;
-    color: black;
-    font-size: 1rem;
-    margin-right: 3rem;
-    position: absolute;               
-    top: 50%;                         
-    transform: translate(0, -50%);
+    content: "\A\A\A Terracce";   
  }
  .allNight:after  {
     content: "\A\A\A 24/7";
-    white-space: pre-wrap;
-    color: black;
-    font-size: 1rem;
-    margin-right: 3rem;
-    position: absolute;               
-    top: 50%;                         
-    transform: translate(0, -50%);
  }
 
+.button{
+    display: inline-block;
+    padding: 8px 25px !important;
+    font-size: 24px !important;
+    font-family: cursive !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    background-color: rgb(167, 157, 230) !important;
+    border-radius: 15px !important;
+    box-shadow: 6px 6px 6px #999;
+    margin-top: 10% !important;
+    margin-left: 30% !important;
+}
