@@ -55,8 +55,8 @@ class CafeDetails extends Component {
                 className="image"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {element.title}
+                <Typography gutterBottom variant="h5" component="h2" className="title">
+                {element.title}
                 </Typography>
                 <Typography component="div">
                   <div className="icons">
@@ -64,27 +64,29 @@ class CafeDetails extends Component {
                       Rate
                       {this.renderStars(element.rating)}
                     </div>
+                    <div >
+                    <FaMapMarker />
+                    {element.address}
+                    </div>
                     <div>
                       <FaClock />
                       {element.workingHours}
                     </div>
                   </div>
-                  <div>
-                    <FaMapMarker />
-                    {element.address}
-                  </div>
-                  Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                  across all continents except Antarctica
-                </Typography>
-                {element.paymentByCard ? (<FaCcVisa />) : null}
-                {element.wiFi ? (<FaWifi />) : null}
+                  <div className="icons"> Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                  across all continents except Antarctica</div>
+                 
+                </Typography >
+                <div className="common-for-box">
+                {element.paymentByCard ? (<FaCcVisa  />) : null}
+                {element.wiFi ? (<FaWifi  />) : null}
                 {element.discount ? (<FaPercent />) : null}
                 {element.vegetarianMenu ? (<FaPagelines />) : null}
                 {element.liveMusic ? (<FaMusic />) : null}
                 {element.businessLunch ? (<FaCoffee />) : null}
                 {element.alcohol ? (<FaGlassMartini />) : null}
-                {element.terrace ? (<FaTree />) : null}
-                {element.allNight ? (<FaClock />) : null}
+                {element.terrace ? (<FaTree/>) : null}
+                {element.allNight ? (<FaClock/>) : null}</div>
               </CardContent>
             </CardActionArea>
           </Card>
