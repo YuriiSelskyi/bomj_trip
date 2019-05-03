@@ -112,6 +112,7 @@ export default class FilterForCafe extends Component {
         <div className = "check-box">
             <Button
               className = "common-style-for-cheak-box wiFi different-cheak-box"
+              
 
               variant="contained"
               onClick={() => this.changeCheckboxButtons('wiFi')}

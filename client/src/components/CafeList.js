@@ -16,13 +16,13 @@ import '../styles/cafe-list.css';
 export default class CafeList extends Component {
   state = {
     redirect: false,
-    indexElement: null,
+    id: null,
   };
 
   redirect = (index) => {
     this.setState({
       redirect: true,
-      indexElement: index,
+      id: index,
     })
   }
   
@@ -58,7 +58,7 @@ export default class CafeList extends Component {
             <Button size="small" color="primary">
               Share
             </Button>
-            <Button size="small" color="primary" onClick={() => this.redirect(index)}>
+            <Button size="small" color="primary" onClick={() => this.redirect(item.id)}>
               Learn More
             </Button>
           </CardActions>
@@ -67,9 +67,16 @@ export default class CafeList extends Component {
   };
 
   render () {
-    const { redirect } = this.state;
+    const { redirect, id } = this.state;
+    const { list } = this.props;
     if(redirect) {
-      return <Redirect to='/cafe-details' />
+      return <Redirect to={{
+        pathname: '/cafe-details',
+        data: {
+          list,
+          id,
+        }
+      }} />
     }
 
     return (

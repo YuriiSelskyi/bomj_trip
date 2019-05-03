@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import FilterForCafe from './FilterForCafe';
 import Advertising from './Advertising';
 import CafeList from './CafeList';
+import { ClimbingBoxLoader } from 'react-spinners';
 
 import '../styles/main.css';
 class App extends Component {
@@ -46,7 +47,15 @@ class App extends Component {
   render () {
 		const { cafes } = this.state;
 		if(cafes === null) {
-			return (<div>...loading</div>)
+			return (
+        <div className="loading">
+          <ClimbingBoxLoader
+            sizeUnit={"px"}
+            size={25}
+            color={'rgb(147, 149, 235)'}
+          />
+        </div>
+      );
 		}
     return (
       <div>
