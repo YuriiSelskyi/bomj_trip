@@ -4,7 +4,8 @@
 }
 
 .advertising {
-    height: 150px;
+    height: 200px;
+    border: 0px double black;
     margin-bottom: 5px;
     margin-top: 2px;
 }
