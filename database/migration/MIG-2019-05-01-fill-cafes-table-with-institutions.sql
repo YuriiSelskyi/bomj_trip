@@ -52,3 +52,29 @@ UPDATE `bomj-trip`.`cafes` SET `location`='49°50\'41.3\"N 24°01\'27.7\"E\n' WH
 UPDATE `bomj-trip`.`cafes` SET `location`='49°50\'37.7\"N 24°01\'58.2\"E\n' WHERE `id`='22';
 UPDATE `bomj-trip`.`cafes` SET `location`='49°50\'15.0\"N 24°01\'52.4\"E\n' WHERE `id`='23';
 UPDATE `bomj-trip`.`cafes` SET `location`='49°50\'21.8\"N 24°01\'53.7\"E\n' WHERE `id`='24';
+
+
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://objor.com/uploads/mini/full/b2/3deb107872576b3416bab538d20c97.jpg' WHERE `id`='24';
+UPDATE `bomj-trip`.`cafes` SET `photos`='http://platescups.com.ua/uploads/post/image/5/large_IMG_8112.jpg' WHERE `id`='8';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://topclub.ua/uploads/images/places/zWnR1kjoVTClWpQQGTqs-YTFz5-YyjtK.jpg' WHERE `id`='1';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://mesta.com.ua/wp-content/uploads/VaBene_1.jpg' WHERE `id`='6';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://s3.eu-central-1.amazonaws.com/listmusor/production/103164/gallery/big/590f3d60c816b.jpg?1316609607' WHERE `id`='9';
+UPDATE `bomj-trip`.`cafes` SET `photos`='http://resto-zametki.com.ua/images/restaurant/1424/1.jpg' WHERE `id`='16';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://port-winebar.lviv.ua/wp-content/uploads/2018/11/unnamed-6.jpg' WHERE `id`='10';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://lv.cf.ua/m/establishment/ff1cccf36c8f542db0202060aea5912e/images/577fb6b392a31_compressed20161005.jpg' WHERE `id`='7';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://tomato.ua/image/resize/storage/restaurants/583852972d36c300197a995f/1480086167583852973b0b0_2ac00eb2ecc776c98a3c693546e019e0.jpg?w=1200&h=1200' WHERE `id`='4';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://s3.eu-central-1.amazonaws.com/listmusor/production/42799/gallery/big/5923246fefb86.jpg?1316609607' WHERE `id`='2';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://objor.com/uploads/mini/full/c3/17ce8956b194749d17605ab479f039.jpg' WHERE `id`='5';
+UPDATE `bomj-trip`.`cafes` SET `photos`='http://kumpelgroup.com/wp-content/uploads/kumpel2_ny20182.jpg' WHERE `id`='11';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://stejka.com/cache/800_600_max/dn0aevvs3h.jpg' WHERE `id`='22';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://2day.kh.ua/wp-content/uploads/2017/03/33168579225_8f9b055bda_k.jpg' WHERE `id`='17';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://baza.zruchno.com.ua/upload/d587be7b-2a29-9bcc-42e3-593fea70d661_obj_img_4_c' WHERE `id`='23';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://afisha.lviv.ua/sites/image.life/styles/great/public/company437/slide-439-db37-1779-kb.jpg?itok=K7KpBZt9 ' WHERE `id`='13';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://ua.igotoworld.com/frontend/webcontent/websites/50/images/gallery/11043_800x600_salo.jpg' WHERE `id`='15';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://s3.eu-central-1.amazonaws.com/listmusor/production/comments/33146/153098/big/5c864f8ba49db.jpeg?1552376296' WHERE `id`='14';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://cdn2.pokupon.ua/uploaded/merchant_page_images/81715/data/large1200/466221120_ErFrN7YWLu1aMWc1bwx-HGE7UriuCrRBw20CUdm4J64.jpg' WHERE `id`='18';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://tsina.lviv.ua/wp-content/uploads/2017/03/sezony.jpg' WHERE `id`='20';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://www.fest.lviv.ua/image.php?portfolioid=30&fileno=3&maxx=900&maxy=800' WHERE `id`='3';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://objor.com/uploads/posts/2018-3/12120-1-5aa047e9bf658.jpeg' WHERE `id`='21';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://objor.com/uploads/mini/full/39/093bf467e0be14cf628cc44c8d7d59.jpg' WHERE `id`='19';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://baza.zruchno.com.ua/upload/45bb11dc-beab-f90a-bd97-5936a65f6f23_obj_img_2_cі' WHERE `id`='12';
