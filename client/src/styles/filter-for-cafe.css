@@ -104,6 +104,6 @@
     justify-content: center;
 }
 
-.shadow {
-    box-shadow:  6px 6px 6px  rgba(240, 6, 6, 0.5) !important;
+.shadows {
+    box-shadow:  6px 6px 6px  rgb(52, 223, 61) !important;
 }
