@@ -27,3 +27,7 @@ ADD COLUMN `rating` TINYINT(1) NOT NULL DEFAULT 1 AFTER `popular`;
 
 ALTER TABLE `cafes` 
 ADD COLUMN `location` VARCHAR(255) NULL AFTER `rating`;
+
+
+ALTER TABLE `bomj-trip`.`cafes` 
+ADD COLUMN `images` BLOB NULL AFTER `rating`;
