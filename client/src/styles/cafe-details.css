@@ -4,7 +4,6 @@
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
-    margin-top: 40px;
     background-color: rgb(127, 133, 207);
     border-radius: 5px;
 }
@@ -44,4 +43,16 @@
     color: rgb(124, 108, 184);
     margin: 30px !important;
     text-align: center;
+}
+
+.blua {
+    width: 10%;
+    position: sticky;
+    top: 5px;
+    margin-left: 5px;
+}
+
+.button-redirect-home {
+    width: 100% !important;
+    border-radius: 10px !important;
 }

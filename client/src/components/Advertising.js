@@ -1,6 +1,7 @@
 import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import range from 'lodash/range';
+import {ClimbingBoxLoader} from 'react-spinners';
 
 const noOfItems = 12;
 const noOfCards = 3;
@@ -35,7 +36,7 @@ export default class Advertising extends React.Component {
   
   createChildren = n => range(n).map(i =>
      <div key={i}
-     style={{ height: '200px',
+     style={{ height: '150px',
               width:'100%', 
               backgroundImage: `url(${this.state.imgArr[i]})`, 
               backgroundRepeat: 'no-repeat', 
@@ -70,7 +71,13 @@ export default class Advertising extends React.Component {
         enablePlaceholder
         numberOfPlaceholderItems={10}
         minimumPlaceholderTime={1000}
-        placeholderItem={<div style={{ height: 200 }}>Placeholder</div>}
+        placeholderItem={<div > 
+        <ClimbingBoxLoader
+                sizeUnit={'px'}
+                size={15}
+                color={'rgb(147, 149, 235)'}
+              />
+        </div>}
 
         // Carousel configurations
         numberOfCards={3}
