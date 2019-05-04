@@ -56,3 +56,8 @@
     width: 100% !important;
     border-radius: 10px !important;
 }
+
+.map-block {
+    width: 100%;
+    height: 500px;
+}
