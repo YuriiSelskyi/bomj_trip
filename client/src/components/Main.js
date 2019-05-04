@@ -20,6 +20,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import ImageUploader from 'react-images-upload';
+import Footer from './Footer';
 
 import TextField from '@material-ui/core/TextField';
 import '../styles/main.css';
@@ -341,7 +342,11 @@ class App extends Component {
             </Button>
           </Dialog>
         </div>
+        <div>
+          <Footer/>
+        </div>
       </div>
+
     );
   }
 }
