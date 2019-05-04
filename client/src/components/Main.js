@@ -19,6 +19,7 @@ import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import Input from '@material-ui/core/Input';
+import Footer from './Footer';
 
 import TextField from '@material-ui/core/TextField';
 import '../styles/main.css';
@@ -162,7 +163,11 @@ class App extends Component {
             </List>
           </Dialog>
         </div>
+        <div>
+          <Footer/>
+        </div>
       </div>
+
     );
   }
 }

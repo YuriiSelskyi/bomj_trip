@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Advertising from './Advertising';
+import Footer from './Footer';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -19,6 +20,7 @@ import {
   FaMapMarker,
 } from 'react-icons/fa';
 import '../styles/cafe-details.css';
+import '../styles/footer.css';
 
 class CafeDetails extends Component {
   constructor(props) {
@@ -90,6 +92,9 @@ class CafeDetails extends Component {
               </CardContent>
             </CardActionArea>
           </Card>
+        </div>
+        <div>
+          <Footer/>
         </div>
       </div>
     );
