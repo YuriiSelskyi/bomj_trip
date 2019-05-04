@@ -32,13 +32,14 @@ class App extends Component {
     super();
     this.state = {
       cafes: null,
+      myLocation: null,
       pictures: [],
     }
     this.newCafe = {
-      title: null,
-      workingHours: null,
-      address: null,
-      actions: null,
+      title: '',
+      workingHours: '',
+      address: '',
+      actions: '',
       wiFi: false,
       paymentByCard: false,
       discount: false,
@@ -49,6 +50,10 @@ class App extends Component {
       terrace: false,
       allNight: false,
       pictures: [],
+      cheapest: 1,
+      popular: 1,
+      rating: 1,
+      nearYou: 1,
     };
   }
 
@@ -75,7 +80,26 @@ class App extends Component {
       throw Error (body.message);
     }
     return body;
-  };
+	};
+	
+	addInstitution = async (institution) => {
+    this.setState ({open: false});
+		const response = await fetch('/add-institution', {
+			method: 'post',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(institution)
+		});
+		const body = await response.json();
+
+		if (response.status !== 200) {
+			throw Error(body.message);
+		}
+
+		return body;
+	};
 
   changeStateCafes = data => {
     if (this.props.coords !== null) {
@@ -105,10 +129,10 @@ class App extends Component {
 
   handleClose = () => {
     this.newCafe = {
-      title: null,
-      workingHours: null,
-      address: null,
-      actions: null,
+      title: '',
+      workingHours: '',
+      address: '',
+      actions: '',
       wiFi: false,
       paymentByCard: false,
       discount: false,
@@ -119,11 +143,15 @@ class App extends Component {
       terrace: false,
       allNight: false,
       pictures: [],
+      cheapest: 1,
+      popular: 1,
+      rating: 1,
+      nearYou: 1,
     };
   }
 
   render () {
-    const { cafes } = this.state;
+    const { cafes, myLocation } = this.state;
     if (cafes === null) {
       return (
         <div className="loading">
@@ -145,7 +173,7 @@ class App extends Component {
             <FilterForCafe changeStateCafes={this.changeStateCafes} />
           </div>
           <div className="cafe-list">
-            <CafeList list={cafes} />
+            <CafeList list={cafes} location={myLocation} />
           </div>
         </div>
         <div className="plus-button">
@@ -184,7 +212,7 @@ class App extends Component {
                 <div>
                   <Button
                     color="inherit"
-                    onClick={() => this.setState ({open: false})}
+                    onClick={() => this.addInstitution(this.newCafe)}
                   >
                     SAVE
                   </Button>
@@ -192,13 +220,14 @@ class App extends Component {
               </Toolbar>
             </AppBar>
             <List>
-              <ListItem className="list">
+              <ListItem className="lists">
                 <TextField
                   id="title"
                   label="Name Cafe"
                   value={this.state.title}
                   onChange={(event) => this.changeDataCafe(event, 'title')}
                   margin="normal"
+                  required={true}
                 />
 
                 <TextField
@@ -207,6 +236,7 @@ class App extends Component {
                   value={this.state.address}
                   onChange={(event) => this.changeDataCafe(event, 'address')}
                   margin="normal"
+                  required={true}
                 />
 
                 <TextField
@@ -214,6 +244,7 @@ class App extends Component {
                   label="Working Hours"
                   value={this.state.workingHours}
                   onChange={(event) => this.changeDataCafe(event, 'workingHours')}
+                  required={true}
                   margin="normal"
                 />
                 <TextField
@@ -221,13 +252,14 @@ class App extends Component {
                   label="Special Proposition"
                   value={this.state.actions}
                   onChange={(event) => this.changeDataCafe(event, 'actions')}
+                  required={true}
                   margin="normal"
                 />
               </ListItem>
-              <ListItem className="list">
+              <ListItem className="lists">
                 <div className="check-and-upload">
                   <div className="upload">
-                    <FormGroup row className="list">
+                    <FormGroup row className="lists">
                       <FormControlLabel
                         control={
                           <Checkbox
@@ -298,7 +330,7 @@ class App extends Component {
                             color="primary"
                           />
                         }
-                        label="Terracce"
+                        label="Terrace"
                       />
                       <FormControlLabel
                         control={
@@ -333,7 +365,7 @@ class App extends Component {
               size="large"
               color="primary"
               className="save-button"
-              onClick={() => this.setState ({open: false})}
+              onClick={() => this.addInstitution(this.newCafe)}
             >
               SAVE
             </Button>
