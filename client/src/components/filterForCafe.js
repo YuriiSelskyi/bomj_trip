@@ -91,18 +91,28 @@ export default class FilterForCafe extends Component {
 			}),
 			() => this.getFilteredCafe(this.state)
 		);
-	};
-
-	styles = theme => ({
-		fab: {
-			margin: theme.spacing.unit,
-		},
-		extendedIcon: {
-			marginRight: theme.spacing.unit,
-		},
-	});
+  };
+  
+  refresh = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      checkboxButtons: {
+        wiFi: false,
+        paymentByCard: false,
+        discount: false,
+        vegetarianMenu: false,
+        liveMusic: false,
+        businessLunch: false,
+        alcohol: false,
+        terrace: false,
+        allNight: false,
+      },
+    }),
+    () => this.getFilteredCafe (this.state));
+  };
 
 	render() {
+    const { checkboxButtons } = this.state;
 		return (
 			<div>
 				<div className="radio-button">
@@ -129,22 +139,19 @@ export default class FilterForCafe extends Component {
 				</div>
 				<div className="check-box">
 					<Button
-						className="common-style-for-cheak-box wiFi different-cheak-box"
-						variant="contained"
+						className={checkboxButtons.wiFi ? "common-style-for-cheak-box wiFi different-cheak-box shadows" : "common-style-for-cheak-box wiFi different-cheak-box"}
 						onClick={() => this.changeCheckboxButtons('wiFi')}
 					>
 						<FaWifi color="white" />
 					</Button>
 					<Button
-						className="common-style-for-cheak-box paymentByCard"
-						variant="contained"
+            className={checkboxButtons.paymentByCard ? "common-style-for-cheak-box paymentByCard different-cheak-box shadows" : "common-style-for-cheak-box paymentByCard different-cheak-box"}						variant="contained"
 						onClick={() => this.changeCheckboxButtons('paymentByCard')}
 					>
 						<FaCcVisa color="white" />
 					</Button>
 					<Button
-						className="common-style-for-cheak-box discounts "
-						variant="contained"
+            className={checkboxButtons.discounts ? "common-style-for-cheak-box discounts different-cheak-box shadows" : "common-style-for-cheak-box discounts different-cheak-box"}						variant="contained"
 						color="primary"
 						onClick={() => this.changeCheckboxButtons('discounts')}
 					>
@@ -153,24 +160,21 @@ export default class FilterForCafe extends Component {
 				</div>
 				<div className="check-box">
 					<Button
-						className="common-style-for-cheak-box vegeterianMenu different-cheak-box"
-						variant="contained"
+            className={checkboxButtons.vegetarianMenu ? "common-style-for-cheak-box vegetarianMenu different-cheak-box shadows" : "common-style-for-cheak-box vegetarianMenu different-cheak-box"}						variant="contained"
 						color="primary"
-						onClick={() => this.changeCheckboxButtons('vegeterianMenu')}
+						onClick={() => this.changeCheckboxButtons('vegetarianMenu')}
 					>
 						<FaPagelines color="white" />
 					</Button>
 					<Button
-						className="common-style-for-cheak-box liveMusic"
-						variant="contained"
+            className={checkboxButtons.liveMusic ? "common-style-for-cheak-box liveMusic different-cheak-box shadows" : "common-style-for-cheak-box liveMusic different-cheak-box"}						variant="contained"
 						color="primary"
 						onClick={() => this.changeCheckboxButtons('liveMusic')}
 					>
 						<FaMusic color="white" />
 					</Button>
 					<Button
-						className="common-style-for-cheak-box businessLunch"
-						variant="contained"
+            className={checkboxButtons.businessLunch ? "common-style-for-cheak-box businessLunch different-cheak-box shadows" : "common-style-for-cheak-box businessLunch different-cheak-box"}						variant="contained"
 						color="primary"
 						onClick={() => this.changeCheckboxButtons('businessLunch')}
 					>
@@ -179,24 +183,21 @@ export default class FilterForCafe extends Component {
 				</div>
 				<div className="check-box">
 					<Button
-						className="common-style-for-cheak-box alcohol different-cheak-box"
-						variant="contained"
+            className={checkboxButtons.alcohol ? "common-style-for-cheak-box alcohol different-cheak-box shadows" : "common-style-for-cheak-box alcohol different-cheak-box"}						variant="contained"
 						color="primary"
 						onClick={() => this.changeCheckboxButtons('alcohol')}
 					>
 						<FaGlassMartini color="white" />
 					</Button>
 					<Button
-						className="common-style-for-cheak-box terrace"
-						variant="contained"
+            className={checkboxButtons.terrace ? "common-style-for-cheak-box terrace different-cheak-box shadows" : "common-style-for-cheak-box terrace different-cheak-box"}						variant="contained"
 						color="primary"
 						onClick={() => this.changeCheckboxButtons('terrace')}
 					>
 						<FaTree color="white" />
 					</Button>
 					<Button
-						className="common-style-for-cheak-box allNight"
-						variant="contained"
+            className={checkboxButtons.allNight ? "common-style-for-cheak-box allNight different-cheak-box shadows" : "common-style-for-cheak-box allNight different-cheak-box"}						variant="contained"
 						color="primary"
 						onClick={() => this.changeCheckboxButtons('allNight')}
 					>
@@ -204,7 +205,7 @@ export default class FilterForCafe extends Component {
 					</Button>
 				</div>
 				<div className="refresh">
-					<Button className="button">Refresh</Button>
+          <Button className="button" onClick={() => this.refresh()}>Refresh</Button>
 				</div>
 			</div>
 		);
