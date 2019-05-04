@@ -50,7 +50,7 @@ export default class CafeList extends Component {
               <Typography component="div">
                 <div className="icons"><div>{this.renderStars(index)}</div><div><FaClock /> {item.workingHours}</div></div>
                 <div><FaMapMarker /> {item.address}</div>
-                {/* {item.about.substr(0,40)}... */}
+                {item.about !== null ? `${item.about.substr(0,100)}...` : 'WE DO NOT HAVE ANY INFORMATION ABOUT THIS CAFE...'}
               </Typography>
             </CardContent>
           </CardActionArea>
