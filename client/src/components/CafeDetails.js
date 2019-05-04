@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Redirect } from 'react-router-dom'
 import Advertising from './Advertising';
-import MapContainer from './GoogleMap';
+// import MapContainer from './GoogleMap';
 import Footer from './Footer';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';

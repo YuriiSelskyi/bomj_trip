@@ -166,30 +166,13 @@ UPDATE `bomj-trip`.`cafes` SET `cheapest` = '3' WHERE (`id` = '20');
 UPDATE `bomj-trip`.`cafes` SET `cheapest` = '1' WHERE (`id` = '21');
 UPDATE `bomj-trip`.`cafes` SET `cheapest` = '2' WHERE (`id` = '22');
 UPDATE `bomj-trip`.`cafes` SET `cheapest` = '3' WHERE (`id` = '23');
-
-
-
-
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '2' WHERE (`id` = '2');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '1' WHERE (`id` = '3');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '3' WHERE (`id` = '5');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '1' WHERE (`id` = '6');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '2' WHERE (`id` = '9');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '2' WHERE (`id` = '11');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '1' WHERE (`id` = '12');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '3' WHERE (`id` = '13');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '2' WHERE (`id` = '14');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '3' WHERE (`id` = '15');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '2' WHERE (`id` = '16');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '1' WHERE (`id` = '17');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '3' WHERE (`id` = '18');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '3' WHERE (`id` = '19');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '1' WHERE (`id` = '20');
-UPDATE `bomj-trip`.`cafes` SET `cheapest` = '1' WHERE (`id` = '22');
 UPDATE `bomj-trip`.`cafes` SET `cheapest` = '2' WHERE (`id` = '24');
+
+
 DELETE FROM `bomj-trip`.`cafes` WHERE (`id` = '25');
 DELETE FROM `bomj-trip`.`cafes` WHERE (`id` = '26');
 DELETE FROM `bomj-trip`.`cafes` WHERE (`id` = '37');
+
 UPDATE `bomj-trip`.`cafes` SET `rating` = '4' WHERE (`id` = '1');
 UPDATE `bomj-trip`.`cafes` SET `rating` = '4' WHERE (`id` = '2');
 UPDATE `bomj-trip`.`cafes` SET `rating` = '3' WHERE (`id` = '3');
@@ -206,6 +189,11 @@ UPDATE `bomj-trip`.`cafes` SET `rating` = '2' WHERE (`id` = '13');
 UPDATE `bomj-trip`.`cafes` SET `rating` = '4' WHERE (`id` = '14');
 UPDATE `bomj-trip`.`cafes` SET `rating` = '4' WHERE (`id` = '15');
 UPDATE `bomj-trip`.`cafes` SET `rating` = '3' WHERE (`id` = '16');
+UPDATE `bomj-trip`.`cafes` SET `rating` = '1' WHERE (`id` = '17');
+UPDATE `bomj-trip`.`cafes` SET `rating` = '3' WHERE (`id` = '18');
 UPDATE `bomj-trip`.`cafes` SET `rating` = '4' WHERE (`id` = '19');
+UPDATE `bomj-trip`.`cafes` SET `rating` = '1' WHERE (`id` = '20');
 UPDATE `bomj-trip`.`cafes` SET `rating` = '2' WHERE (`id` = '21');
+UPDATE `bomj-trip`.`cafes` SET `rating` = '1' WHERE (`id` = '22');
+UPDATE `bomj-trip`.`cafes` SET `rating` = '3' WHERE (`id` = '23');
 UPDATE `bomj-trip`.`cafes` SET `rating` = '3' WHERE (`id` = '24');

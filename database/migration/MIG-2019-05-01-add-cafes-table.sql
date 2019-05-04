@@ -39,3 +39,8 @@ DELETE FROM `bomj-trip`.`cafes` WHERE (`id` = '26');
 DELETE FROM `bomj-trip`.`cafes` WHERE (`id` = '25');
 ALTER TABLE `cafes` 
 ADD COLUMN `photos` VARCHAR(2000) NULL AFTER `location`;
+
+ALTER TABLE `bomj-trip`.`cafes` 
+CHANGE COLUMN `cheapest` `cheapest` INT NULL DEFAULT '0' ,
+CHANGE COLUMN `popular` `popular` INT NULL DEFAULT '0' ;
+

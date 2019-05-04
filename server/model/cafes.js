@@ -63,15 +63,15 @@ var cafes = connection.define('cafes', {
 		allowNull: false
 	},
 	cheapest: {
-		type: sequelize.TINYINT(1),
+		type: sequelize.INTEGER,
 		allowNull: false
 	},
 	popular: {
-		type: sequelize.TINYINT(1),
+		type: sequelize.INTEGER,
 		allowNull: false
 	},
 	rating: {
-		type: sequelize.TINYINT(1),
+		type: sequelize.INTEGER,
 		allowNull: false
 	},
 
