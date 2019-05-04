@@ -3,7 +3,8 @@
 }
 
 .check-box {
-    display: flex;
+		display: flex;
+		height: 100%;
     justify-content: space-around;
 }
 

@@ -2,6 +2,10 @@ import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import range from 'lodash/range';
 
+const noOfItems = 12;
+const noOfCards = 3;
+const autoPlayDelay = 5000;
+
 export default class Advertising extends React.Component {
   constructor(props) {
     super(props);
@@ -31,19 +35,28 @@ export default class Advertising extends React.Component {
   
   createChildren = n => range(n).map(i =>
      <div key={i}
-     style={{ height: '150px',
+     style={{ height: '200px',
               width:'100%', 
               backgroundImage: `url(${this.state.imgArr[i]})`, 
               backgroundRepeat: 'no-repeat', 
               backgroundPosition: 'center center',
               backgroundSize: 'cover'}}>
-     </div>);
-    // <div key={i}>
+		 </div>);
+		 
+	componentDidMount() {
+		this.interval = setInterval(this.tick, autoPlayDelay);
+	}
 
-    //     <img src="http://www.fuji-sushi.kiev.ua/wp-content/uploads/2017/07/banner2.png"></img>
-    // </div>);
+	componentWillUnmount() {
+		clearInterval(this.interval);
+	}
 
-  changeActiveItem = (activeItemIndex) => this.setState({ activeItemIndex });
+	tick = () => this.setState(prevState => ({
+		activeItemIndex: (prevState.activeItemIndex + 1) % (noOfItems - noOfCards + 1),
+	}));
+
+	onChange = value => this.setState({ activeItemIndex: value });
+		
   render() {
     const {
       activeItemIndex,
@@ -59,17 +72,17 @@ export default class Advertising extends React.Component {
         minimumPlaceholderTime={1000}
         placeholderItem={<div style={{ height: 200 }}>Placeholder</div>}
 
-      // Carousel configurations
-      numberOfCards={3}
-      gutter={1}
-      showSlither={true}
-      firstAndLastGutter={true}
-      freeScrolling={false}
+        // Carousel configurations
+        numberOfCards={3}
+        gutter={1}
+        showSlither={true}
+        firstAndLastGutter={true}
+        freeScrolling={false}
 
-      // Active item configurations
-      requestToChangeActive={this.changeActiveItem}
-      activeItemIndex={activeItemIndex}
-      activePosition={'center'}
+        // Active item configurations
+				requestToChangeActive={this.onChange}
+        activeItemIndex={activeItemIndex}
+        activePosition={'center'}
 
         chevronWidth={24}
         rightChevron={'>'}
