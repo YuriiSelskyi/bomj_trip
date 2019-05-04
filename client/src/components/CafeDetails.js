@@ -89,6 +89,10 @@ class CafeDetails extends Component {
                 {element.alcohol ? (<FaGlassMartini />) : null}
                 {element.terrace ? (<FaTree/>) : null}
                 {element.allNight ? (<FaClock/>) : null}</div>
+
+                <div>
+                  popopopopopopo
+                </div>
               </CardContent>
             </CardActionArea>
           </Card>

@@ -52,3 +52,5 @@ UPDATE `bomj-trip`.`cafes` SET `location`='49°50\'41.3\"N 24°01\'27.7\"E\n' WH
 UPDATE `bomj-trip`.`cafes` SET `location`='49°50\'37.7\"N 24°01\'58.2\"E\n' WHERE `id`='22';
 UPDATE `bomj-trip`.`cafes` SET `location`='49°50\'15.0\"N 24°01\'52.4\"E\n' WHERE `id`='23';
 UPDATE `bomj-trip`.`cafes` SET `location`='49°50\'21.8\"N 24°01\'53.7\"E\n' WHERE `id`='24';
+
+UPDATE `bomj-trip`.`cafes` SET `title` = 'Kupitsa', `address` = 'Brativ Rohatyntsiv St, 18', `actions` = 'business lunch from 12.00 to 16.00, Every Tuesday all tincture \"2 + 1\", weekdays - from 14.00 to 18.00 \"2 + 2\"', `workingHours` = '24 hours', `liveMusic` = '1', `businessLunch` = '1' WHERE (`id` = '1');
