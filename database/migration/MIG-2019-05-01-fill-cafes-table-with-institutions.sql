@@ -83,3 +83,28 @@ UPDATE `bomj-trip`.`cafes` SET `address` = 'Sichovykh Striltsiv St, 7', `actions
 UPDATE `bomj-trip`.`cafes` SET `address` = 'Valova St, 19', `actions` = 'Every tuesday 2+1 ', `rating` = '2', `about` = 'Our daily challenge: highest quality ingredients according to traditional recipes freshly interpreted and served with a lot of passion for the guest! Enjoy fine Mediterranean cuisine and exquisite service. We are very pleased to welcome you as guests in our restaurant.' WHERE (`id` = '10');
 UPDATE `bomj-trip`.`cafes` SET `address` = 'Stepana Bandery St, 25', `actions` = 'business lunch (which bring extremely fast)', `rating` = '2', `about` = 'Pizza House it\'s the place where you can get one of the cheapest complex lunch in Lviv. Also the main thing of this cafe is their staff, because as soon as you paid for your order you shoould wait aroud 2 minutes and you will get your order. Keep your time, eat in Pizza House.' WHERE (`id` = '16');
 UPDATE `bomj-trip`.`cafes` SET `address` = 'Shevchenka Ave, 7', `actions` = 'Happy Hours on weekdays from 19:00 to 20:00 (for alcohol)', `rating` = '2', `about` = 'The Crazy Town restaurant is an ideal choice for connoisseurs of comfort, quality and delicious dishes and professional service. Our establishment is a great place not only for dinner or lunch, but also a great option for fun holidays, meetings with friends and interesting dates. The location of the Crazy Town restaurant in the city center allows you to enjoy the guests and residents of Lviv with modern European and Asian cuisine. On a cool day, guests will be provided with a blanket and warming drinks. The Crazy Town restaurant\'s veranda is a favorite place for the city\'s residents. Panoramic windows overlooking the lively avenues, comfortable furniture, lots of light create a unique atmosphere.' WHERE (`id` = '24');
+
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://objor.com/uploads/mini/full/b2/3deb107872576b3416bab538d20c97.jpg' WHERE `id`='24';
+UPDATE `bomj-trip`.`cafes` SET `photos`='http://platescups.com.ua/uploads/post/image/5/large_IMG_8112.jpg' WHERE `id`='8';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://topclub.ua/uploads/images/places/zWnR1kjoVTClWpQQGTqs-YTFz5-YyjtK.jpg' WHERE `id`='1';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://mesta.com.ua/wp-content/uploads/VaBene_1.jpg' WHERE `id`='6';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://s3.eu-central-1.amazonaws.com/listmusor/production/103164/gallery/big/590f3d60c816b.jpg?1316609607' WHERE `id`='9';
+UPDATE `bomj-trip`.`cafes` SET `photos`='http://resto-zametki.com.ua/images/restaurant/1424/1.jpg' WHERE `id`='16';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://port-winebar.lviv.ua/wp-content/uploads/2018/11/unnamed-6.jpg' WHERE `id`='10';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://lv.cf.ua/m/establishment/ff1cccf36c8f542db0202060aea5912e/images/577fb6b392a31_compressed20161005.jpg' WHERE `id`='7';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://tomato.ua/image/resize/storage/restaurants/583852972d36c300197a995f/1480086167583852973b0b0_2ac00eb2ecc776c98a3c693546e019e0.jpg?w=1200&h=1200' WHERE `id`='4';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://s3.eu-central-1.amazonaws.com/listmusor/production/42799/gallery/big/5923246fefb86.jpg?1316609607' WHERE `id`='2';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://objor.com/uploads/mini/full/c3/17ce8956b194749d17605ab479f039.jpg' WHERE `id`='5';
+UPDATE `bomj-trip`.`cafes` SET `photos`='http://kumpelgroup.com/wp-content/uploads/kumpel2_ny20182.jpg' WHERE `id`='11';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://stejka.com/cache/800_600_max/dn0aevvs3h.jpg' WHERE `id`='22';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://2day.kh.ua/wp-content/uploads/2017/03/33168579225_8f9b055bda_k.jpg' WHERE `id`='17';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://baza.zruchno.com.ua/upload/d587be7b-2a29-9bcc-42e3-593fea70d661_obj_img_4_c' WHERE `id`='23';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://afisha.lviv.ua/sites/image.life/styles/great/public/company437/slide-439-db37-1779-kb.jpg?itok=K7KpBZt9 ' WHERE `id`='13';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://ua.igotoworld.com/frontend/webcontent/websites/50/images/gallery/11043_800x600_salo.jpg' WHERE `id`='15';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://s3.eu-central-1.amazonaws.com/listmusor/production/comments/33146/153098/big/5c864f8ba49db.jpeg?1552376296' WHERE `id`='14';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://cdn2.pokupon.ua/uploaded/merchant_page_images/81715/data/large1200/466221120_ErFrN7YWLu1aMWc1bwx-HGE7UriuCrRBw20CUdm4J64.jpg' WHERE `id`='18';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://tsina.lviv.ua/wp-content/uploads/2017/03/sezony.jpg' WHERE `id`='20';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://www.fest.lviv.ua/image.php?portfolioid=30&fileno=3&maxx=900&maxy=800' WHERE `id`='3';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://objor.com/uploads/posts/2018-3/12120-1-5aa047e9bf658.jpeg' WHERE `id`='21';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://objor.com/uploads/mini/full/39/093bf467e0be14cf628cc44c8d7d59.jpg' WHERE `id`='19';
+UPDATE `bomj-trip`.`cafes` SET `photos`='https://baza.zruchno.com.ua/upload/610f0c97-c1e6-e6b1-529b-5936a68a49b1_obj_img_3_c' WHERE `id`='12';

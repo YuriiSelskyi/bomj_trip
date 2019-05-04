@@ -78,6 +78,14 @@ var cafes = connection.define('cafes', {
 	about: {
 		type: sequelize.STRING(2000),
 		allowNull: true
+	},
+	photos: {
+		type: sequelize.STRING(2000),
+		allowNull: true
+	},
+	location: {
+		type: sequelize.STRING(255),
+		allowNull: true
 	}
 });
 

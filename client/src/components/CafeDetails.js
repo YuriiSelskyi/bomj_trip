@@ -70,7 +70,7 @@ class CafeDetails extends Component {
             <CardActionArea>
               <CardMedia
                 component="img"
-                image="https://tomato.ua/image/resize/storage/restaurants/5838548e2d36c300197aa20e/14975145605942424054acc_59424233817ef7.79381270.jpeg?w=1200&h=1200"
+                image={element.photos}
                 title="Contemplative Reptile"
                 className="image"
               />

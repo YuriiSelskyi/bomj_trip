@@ -33,14 +33,13 @@ export default class CafeList extends Component {
 
   renderCafeList = () => {
     const {list} = this.props;
-    console.log(list);
     return list.map((item, index) => (
       <Card className="card" key={index} onClick={() => this.redirect(item.id)}>
           <CardActionArea>
             <CardMedia
               component="img"
               height="140"
-              image="https://newsroom.unsw.edu.au/sites/default/files/styles/full_width/public/thumbnails/image/5_junk_food_shutterstock_1.jpg?itok=X29w4W_j"
+              image={item.photos}
               title="Contemplative Reptile"
             />
             <CardContent>

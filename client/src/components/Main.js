@@ -152,7 +152,6 @@ class App extends Component {
 
   render () {
     const { cafes, myLocation } = this.state;
-    console.log(myLocation);
     if (cafes === null) {
       return (
         <div className="loading">
