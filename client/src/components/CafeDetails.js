@@ -70,7 +70,7 @@ class CafeDetails extends Component {
             <CardActionArea>
               <CardMedia
                 component="img"
-                image="https://newsroom.unsw.edu.au/sites/default/files/styles/full_width/public/thumbnails/image/5_junk_food_shutterstock_1.jpg?itok=X29w4W_j"
+                image={element.photos}
                 title="Contemplative Reptile"
                 className="image"
               />
@@ -93,8 +93,9 @@ class CafeDetails extends Component {
                       {element.workingHours}
                     </div>
                   </div>
-                  <div className="icons"> Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                  across all continents except Antarctica</div>
+
+                  <div className="icons"> {element.about}</div>
+                
                 </Typography >
                 <div className="common-for-box">
                 {element.paymentByCard ? (<FaCcVisa  />) : null}
@@ -106,8 +107,8 @@ class CafeDetails extends Component {
                 {element.alcohol ? (<FaGlassMartini />) : null}
                 {element.terrace ? (<FaTree/>) : null}
                 {element.allNight ? (<FaClock/>) : null}</div>
-                <div className="map-block">
-                  <MapContainer />
+
+                <div>
                 </div>
               </CardContent>
             </CardActionArea>

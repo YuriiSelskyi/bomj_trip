@@ -152,7 +152,6 @@ class App extends Component {
 
   render () {
     const { cafes, myLocation } = this.state;
-    console.log(myLocation);
     if (cafes === null) {
       return (
         <div className="loading">
@@ -228,6 +227,7 @@ class App extends Component {
                   value={this.state.title}
                   onChange={(event) => this.changeDataCafe(event, 'title')}
                   margin="normal"
+                  required={true}
                 />
 
                 <TextField
@@ -236,6 +236,7 @@ class App extends Component {
                   value={this.state.address}
                   onChange={(event) => this.changeDataCafe(event, 'address')}
                   margin="normal"
+                  required={true}
                 />
 
                 <TextField
@@ -243,6 +244,7 @@ class App extends Component {
                   label="Working Hours"
                   value={this.state.workingHours}
                   onChange={(event) => this.changeDataCafe(event, 'workingHours')}
+                  required={true}
                   margin="normal"
                 />
                 <TextField
@@ -250,6 +252,7 @@ class App extends Component {
                   label="Special Proposition"
                   value={this.state.actions}
                   onChange={(event) => this.changeDataCafe(event, 'actions')}
+                  required={true}
                   margin="normal"
                 />
               </ListItem>
