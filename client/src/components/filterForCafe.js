@@ -93,16 +93,28 @@ export default class FilterForCafe extends Component {
     );
   };
 
-  styles = theme => ({
-    fab: {
-      margin: theme.spacing.unit,
-    },
-    extendedIcon: {
-      marginRight: theme.spacing.unit,
-    },
-  });
+  refresh = () => {
+    this.setState (
+      prevState => ({
+        ...prevState,
+        checkboxButtons: {
+          wiFi: false,
+          paymentByCard: false,
+          discount: false,
+          vegetarianMenu: false,
+          liveMusic: false,
+          businessLunch: false,
+          alcohol: false,
+          terrace: false,
+          allNight: false,
+        },
+      }),
+      () => this.getFilteredCafe (this.state)
+    );
+  };
 
   render () {
+    const {checkboxButtons} = this.state;
     return (
       <div>
         <div className="radio-button">
@@ -129,21 +141,32 @@ export default class FilterForCafe extends Component {
         </div>
         <div className="check-box">
           <Button
-            className="common-style-for-cheak-box wiFi different-cheak-box"
-            variant="contained"
+            className={
+              checkboxButtons.wiFi
+                ? 'common-style-for-cheak-box wiFi different-cheak-box shadows'
+                : 'common-style-for-cheak-box wiFi different-cheak-box'
+            }
             onClick={() => this.changeCheckboxButtons ('wiFi')}
           >
             <FaWifi color="white" />
           </Button>
           <Button
-            className="common-style-for-cheak-box paymentByCard"
+            className={
+              checkboxButtons.paymentByCard
+                ? 'common-style-for-cheak-box paymentByCard different-cheak-box shadows'
+                : 'common-style-for-cheak-box paymentByCard different-cheak-box'
+            }
             variant="contained"
             onClick={() => this.changeCheckboxButtons ('paymentByCard')}
           >
             <FaCcVisa color="white" />
           </Button>
           <Button
-            className="common-style-for-cheak-box discounts "
+            className={
+              checkboxButtons.discounts
+                ? 'common-style-for-cheak-box discounts different-cheak-box shadows'
+                : 'common-style-for-cheak-box discounts different-cheak-box'
+            }
             variant="contained"
             color="primary"
             onClick={() => this.changeCheckboxButtons ('discounts')}
@@ -153,15 +176,23 @@ export default class FilterForCafe extends Component {
         </div>
         <div className="check-box">
           <Button
-            className="common-style-for-cheak-box vegeterianMenu different-cheak-box"
+            className={
+              checkboxButtons.vegetarianMenu
+                ? 'common-style-for-cheak-box vegetarianMenu different-cheak-box shadows'
+                : 'common-style-for-cheak-box vegetarianMenu different-cheak-box'
+            }
             variant="contained"
             color="primary"
-            onClick={() => this.changeCheckboxButtons ('vegeterianMenu')}
+            onClick={() => this.changeCheckboxButtons ('vegetarianMenu')}
           >
             <FaPagelines color="white" />
           </Button>
           <Button
-            className="common-style-for-cheak-box liveMusic"
+            className={
+              checkboxButtons.liveMusic
+                ? 'common-style-for-cheak-box liveMusic different-cheak-box shadows'
+                : 'common-style-for-cheak-box liveMusic different-cheak-box'
+            }
             variant="contained"
             color="primary"
             onClick={() => this.changeCheckboxButtons ('liveMusic')}
@@ -169,7 +200,11 @@ export default class FilterForCafe extends Component {
             <FaMusic color="white" />
           </Button>
           <Button
-            className="common-style-for-cheak-box businessLunch"
+            className={
+              checkboxButtons.businessLunch
+                ? 'common-style-for-cheak-box businessLunch different-cheak-box shadows'
+                : 'common-style-for-cheak-box businessLunch different-cheak-box'
+            }
             variant="contained"
             color="primary"
             onClick={() => this.changeCheckboxButtons ('businessLunch')}
@@ -179,7 +214,11 @@ export default class FilterForCafe extends Component {
         </div>
         <div className="check-box">
           <Button
-            className="common-style-for-cheak-box alcohol different-cheak-box"
+            className={
+              checkboxButtons.alcohol
+                ? 'common-style-for-cheak-box alcohol different-cheak-box shadows'
+                : 'common-style-for-cheak-box alcohol different-cheak-box'
+            }
             variant="contained"
             color="primary"
             onClick={() => this.changeCheckboxButtons ('alcohol')}
@@ -187,7 +226,11 @@ export default class FilterForCafe extends Component {
             <FaGlassMartini color="white" />
           </Button>
           <Button
-            className="common-style-for-cheak-box terrace"
+            className={
+              checkboxButtons.terrace
+                ? 'common-style-for-cheak-box terrace different-cheak-box shadows'
+                : 'common-style-for-cheak-box terrace different-cheak-box'
+            }
             variant="contained"
             color="primary"
             onClick={() => this.changeCheckboxButtons ('terrace')}
@@ -195,7 +238,11 @@ export default class FilterForCafe extends Component {
             <FaTree color="white" />
           </Button>
           <Button
-            className="common-style-for-cheak-box allNight"
+            className={
+              checkboxButtons.allNight
+                ? 'common-style-for-cheak-box allNight different-cheak-box shadows'
+                : 'common-style-for-cheak-box allNight different-cheak-box'
+            }
             variant="contained"
             color="primary"
             onClick={() => this.changeCheckboxButtons ('allNight')}
@@ -204,7 +251,9 @@ export default class FilterForCafe extends Component {
           </Button>
         </div>
         <div className="refresh">
-          <Button className="button">Refresh</Button>
+          <Button className="button" onClick={() => this.refresh ()}>
+            Refresh
+          </Button>
         </div>
       </div>
     );

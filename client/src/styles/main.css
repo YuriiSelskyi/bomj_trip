@@ -4,7 +4,8 @@
 }
 
 .advertising {
-    height: 150px;
+    height: 200px;
+    border: 0px double black;
     margin-bottom: 5px;
     margin-top: 2px;
 }
@@ -56,6 +57,28 @@
 
 .list {
     display: flex !important;
-    justify-content: space-around !important;
+    justify-content: space-between !important;
     margin-top: 35px !important;
+}
+
+.shadow {
+    box-shadow:  3px 3px 6px  rgb(167, 157, 230) !important;
+}
+
+.check-and-upload {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.upload {
+    width: 50%;
+}
+
+.shadow-grean {
+    box-shadow:  3px 3px 6px  rgb(52, 223, 61) !important;
+}
+
+.save-button {
+    margin: 20px 50px !important;
 }

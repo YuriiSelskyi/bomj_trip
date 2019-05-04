@@ -12,6 +12,11 @@ app.use(bodyParser.json())
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
+// app.post('/add-institution', (req, res) => {
+
+// 	console.log(req.body);
+// });
+
 app.post('/get-all-institutions', (req, res) => {
 
 	Cafes.findAll({

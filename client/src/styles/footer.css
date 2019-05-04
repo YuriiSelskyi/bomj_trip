@@ -1,0 +1,14 @@
+.footer{
+    background-color: rgb(147, 149, 235);
+    min-height: 140px !important;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1%;
+    font-family: cursive;
+    padding-bottom: 1%; 
+    margin-top:1%;
+}
+
+.footer-components{
+    text-align: center !important;
+}

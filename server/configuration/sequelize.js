@@ -5,8 +5,8 @@ var connection = new Sequelize('bomj-trip', 'root', '1234', {
 	host: 'localhost',
 	dialect: "mysql",
 	define: {
-        timestamps: false
-    }
+			timestamps: false
+	}
 });
 
 module.exports.connection = connection;
