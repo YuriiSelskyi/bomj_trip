@@ -32,6 +32,7 @@ class App extends Component {
     super();
     this.state = {
       cafes: null,
+      myLocation: null,
       pictures: [],
     }
     this.newCafe = {
@@ -150,8 +151,8 @@ class App extends Component {
   }
 
   render () {
-    const { cafes } = this.state;
-    console.log(this.newCafe);
+    const { cafes, myLocation } = this.state;
+    console.log(myLocation);
     if (cafes === null) {
       return (
         <div className="loading">
@@ -173,7 +174,7 @@ class App extends Component {
             <FilterForCafe changeStateCafes={this.changeStateCafes} />
           </div>
           <div className="cafe-list">
-            <CafeList list={cafes} />
+            <CafeList list={cafes} location={myLocation} />
           </div>
         </div>
         <div className="plus-button">

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Redirect } from 'react-router-dom'
 import Advertising from './Advertising';
+import MapContainer from './GoogleMap';
 import Footer from './Footer';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -94,7 +95,6 @@ class CafeDetails extends Component {
                   </div>
                   <div className="icons"> Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                   across all continents except Antarctica</div>
-                 
                 </Typography >
                 <div className="common-for-box">
                 {element.paymentByCard ? (<FaCcVisa  />) : null}
@@ -106,6 +106,9 @@ class CafeDetails extends Component {
                 {element.alcohol ? (<FaGlassMartini />) : null}
                 {element.terrace ? (<FaTree/>) : null}
                 {element.allNight ? (<FaClock/>) : null}</div>
+                <div className="map-block">
+                  <MapContainer />
+                </div>
               </CardContent>
             </CardActionArea>
           </Card>
