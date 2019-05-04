@@ -31,5 +31,9 @@ ADD COLUMN `location` VARCHAR(255) NULL AFTER `rating`;
 
 ALTER TABLE `bomj-trip`.`cafes` 
 ADD COLUMN `images` BLOB NULL AFTER `rating`;
+
 ALTER TABLE `bomj-trip`.`cafes` 
 ADD COLUMN `about` VARCHAR(2000) NULL AFTER `rating`;
+
+
+

@@ -75,8 +75,7 @@ class CafeDetails extends Component {
                       {element.workingHours}
                     </div>
                   </div>
-                  <div className="icons"> Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                  across all continents except Antarctica</div>
+                  <div className="icons"> {element.about}</div>
                  
                 </Typography >
                 <div className="common-for-box">
@@ -91,7 +90,6 @@ class CafeDetails extends Component {
                 {element.allNight ? (<FaClock/>) : null}</div>
 
                 <div>
-                  popopopopopopo
                 </div>
               </CardContent>
             </CardActionArea>

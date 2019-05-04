@@ -73,6 +73,11 @@ var cafes = connection.define('cafes', {
 	rating: {
 		type: sequelize.TINYINT(1),
 		allowNull: false
+	},
+
+	about: {
+		type: sequelize.STRING(2000),
+		allowNull: true
 	}
 });
 
