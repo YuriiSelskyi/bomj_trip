@@ -54,10 +54,7 @@ export default class CafeList extends Component {
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              Share
-            </Button>
+          <CardActions className="learn-more">
             <Button size="small" color="primary" onClick={() => this.redirect(item.id)}>
               Learn More
             </Button>
