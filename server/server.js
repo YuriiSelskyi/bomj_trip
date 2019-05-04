@@ -12,10 +12,20 @@ app.use(bodyParser.json())
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
-// app.post('/add-institution', (req, res) => {
+app.post('/add-institution', (req, res) => {
+	console.log(req.body);
 
-// 	console.log(req.body);
-// });
+	return Cafes.create({
+		id: req.body.id,
+		title: req.body.title
+	}).then(function (res) {
+		if (users) {
+			res.send(res);
+		} else {
+			res.status(400).send('Error in insert new record');
+		}
+	});
+});
 
 app.post('/get-all-institutions', (req, res) => {
 

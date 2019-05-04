@@ -53,7 +53,7 @@ export default class FilterForCafe extends Component {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(state),
+			body: JSON.stringify(state)
 		});
 		const body = await response.json();
 

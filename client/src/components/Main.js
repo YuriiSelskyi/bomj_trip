@@ -78,7 +78,25 @@ class App extends Component {
     }
 
     return body;
-  };
+	};
+	
+	addInstitution = async (institution) => {
+		const response = await fetch('/add-institution', {
+			method: 'post',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(institution)
+		});
+		const body = await response.json();
+
+		if (response.status !== 200) {
+			throw Error(body.message);
+		}
+
+		return body;
+	};
 
   changeStateCafes = data => {
     if (this.props.coords !== null) {
@@ -301,7 +319,7 @@ class App extends Component {
                             color="primary"
                           />
                         }
-                        label="Terracce"
+                        label="Terrace"
                       />
                       <FormControlLabel
                         control={
@@ -336,7 +354,7 @@ class App extends Component {
               size="large"
               color="primary"
               className="save-button"
-              onClick={() => this.setState ({open: false})}
+              onClick={this.addInstitution(this.newCafe)}
             >
               SAVE
             </Button>
