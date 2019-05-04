@@ -33,6 +33,7 @@ export default class CafeList extends Component {
 
   renderCafeList = () => {
     const {list} = this.props;
+    console.log(list);
     return list.map((item, index) => (
       <Card className="card" key={index} onClick={() => this.redirect(item.id)}>
           <CardActionArea>
@@ -49,8 +50,7 @@ export default class CafeList extends Component {
               <Typography component="div">
                 <div className="icons"><div>{this.renderStars(index)}</div><div><FaClock /> {item.workingHours}</div></div>
                 <div><FaMapMarker /> {item.address}</div>
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+                {/* {item.about.substr(0,40)}... */}
               </Typography>
             </CardContent>
           </CardActionArea>
