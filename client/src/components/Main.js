@@ -21,7 +21,6 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import ImageUploader from 'react-images-upload';
 import Footer from './Footer';
-
 import TextField from '@material-ui/core/TextField';
 import '../styles/main.css';
 
@@ -64,19 +63,17 @@ class App extends Component {
   }
 
   getAllInstitutions = async () => {
-    const response = await fetch ('/get-all-institutions', {
+    const response = await fetch('/get-all-institutions', {
       method: 'post',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
     });
-    const body = await response.json ();
-
+    const body = await response.json();
     if (response.status !== 200) {
       throw Error (body.message);
     }
-
     return body;
   };
 
@@ -346,7 +343,6 @@ class App extends Component {
           <Footer/>
         </div>
       </div>
-
     );
   }
 }
