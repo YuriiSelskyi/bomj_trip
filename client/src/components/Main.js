@@ -170,7 +170,7 @@ class App extends Component {
         </div>
         <div className="main">
           <div className="menu">
-            <FilterForCafe changeStateCafes={this.changeStateCafes} />
+            <FilterForCafe changeStateCafes={this.changeStateCafes} cafes={cafes} />
           </div>
           <div className="cafe-list">
             <CafeList list={cafes} location={myLocation} />

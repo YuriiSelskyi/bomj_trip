@@ -19,29 +19,33 @@ import {
 import '../styles/filter-for-cafe.css';
 
 export default class FilterForCafe extends Component {
-  state = {
-    checkboxButtons: {
-      wiFi: false,
-      paymentByCard: false,
-      discount: false,
-      vegetarianMenu: false,
-      liveMusic: false,
-      businessLunch: false,
-      alcohol: false,
-      terrace: false,
-      allNight: false,
-    },
-    radioButtons: {
-      nearYou: false,
-      cheapest: false,
-      popular: false,
-    },
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      checkboxButtons: {
+        wiFi: false,
+        paymentByCard: false,
+        discount: false,
+        vegetarianMenu: false,
+        liveMusic: false,
+        businessLunch: false,
+        alcohol: false,
+        terrace: false,
+        allNight: false,
+      },
+      radioButtons: {
+        nearYou: false,
+        cheapest: false,
+        popular: false,
+      },
+    };
+  }
+  
 
   getFilteredCafe = state => {
     this.getFilteredInstitution (state)
       .then (res => {
-        this.props.changeStateCafes (res);
+        this.props.changeStateCafes(res);
       })
       .catch (err => console.log (err));
   };
@@ -79,17 +83,19 @@ export default class FilterForCafe extends Component {
   };
 
   changeRadioButtons = name => {
+    const {radioButtons} = this.state;
     this.setState (
       prevState => ({
         ...prevState,
         radioButtons: {
+          ...prevState.radioButtons,
           nearYou: false,
           cheapest: false,
           popular: false,
-          [name]: true,
+          [name]: !radioButtons[name],
         },
       }),
-      () => this.getFilteredCafe (this.state)
+      () => this.getFilteredCafe(this.state)
     );
   };
 

@@ -36,10 +36,17 @@ app.post('/get-all-institutions', (req, res) => {
 
 app.post('/get-filtered-institution', (req, res) => {
 	let filter = Object.assign({}, req.body.checkboxButtons, req.body.radioButtons);
+	let sortingKey;
 
-	for (let value in filter) {
-		if (!filter[value]) {
-			delete filter[value];
+	for(let key in req.body.radioButtons) {
+		if(req.body.radioButtons[key] && key !== 'nearYou') {
+			sortingKey = key;
+		}
+	}
+	
+	for (let key in filter) {
+		if (!filter[key]) {
+			delete filter[key];
 		}
 	}
 
@@ -50,6 +57,10 @@ app.post('/get-filtered-institution', (req, res) => {
 		raw: true
 	})
 	.then((cafes) => {
+		if(sortingKey) {
+			cafes = cafes.sort((a, b) => parseInt(a[sortingKey]) - parseInt(b[sortingKey]));
+		}
+
 		res.send({ data: cafes });
 	});
 });
