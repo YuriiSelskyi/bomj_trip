@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom'
 import Advertising from './Advertising';
 import Footer from './Footer';
 import Card from '@material-ui/core/Card';
@@ -6,6 +7,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Fab from '@material-ui/core/Fab';
 import {
   FaWifi,
   FaCcVisa,
@@ -18,6 +20,7 @@ import {
   FaClock,
   FaStar,
   FaMapMarker,
+  FaHome,
 } from 'react-icons/fa';
 import '../styles/cafe-details.css';
 import '../styles/footer.css';
@@ -28,6 +31,7 @@ class CafeDetails extends Component {
     const { location } = this.props;
     this.state = {
       data: location.data || JSON.parse(localStorage.getItem('data')),
+      red: false,
     };
     if (location.data !== undefined) {
       localStorage.setItem('data', JSON.stringify(location.data));
@@ -39,13 +43,26 @@ class CafeDetails extends Component {
   }
 
   render () {
-    const { data } = this.state;
+    const { data, red } = this.state;
     const element = data.list.find((item) => item.id === data.id);
+    if(red) {
+      return <Redirect to={{ pathname: '/'}} />
+    }
     console.log(element)
     return (
       <div>
         <div className="advertising">
           <Advertising />
+        </div>
+        <div className="blua">
+          <Fab
+            color="primary"
+            aria-label="Add"
+            onClick={() => this.setState({red:true})}
+            className="button-redirect-home"
+          >
+            <FaHome size={30} />
+          </Fab>
         </div>
         <div className="main-block">
           <Card className="card card-main" key={element.id} >
