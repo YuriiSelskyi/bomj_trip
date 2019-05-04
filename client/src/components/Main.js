@@ -102,11 +102,6 @@ class App extends Component {
 	};
 
   changeStateCafes = data => {
-    if (this.props.coords !== null) {
-      this.setState ({
-        myLocation: this.props.coords,
-      });
-    }
     this.setState ({
       cafes: data.data,
     });
@@ -162,6 +157,12 @@ class App extends Component {
           />
         </div>
       );
+    }
+    if (this.props.coords !== null) {
+      const { coords } = this.props;
+      const latitude = coords.latitude;
+      const longitude = coords.longitude;
+      localStorage.setItem('myLocation', JSON.stringify({latitude, longitude}));
     }
     return (
       <div>

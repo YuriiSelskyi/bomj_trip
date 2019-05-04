@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 import Advertising from './Advertising';
-import MapContainer from './GoogleMap';
 import Footer from './Footer';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import {Map, InfoWindow, Marker, GoogleApiWrapper, Polyline} from 'google-maps-react';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -69,7 +68,32 @@ export class CafeDetails extends Component {
     if(red) {
       return <Redirect to={{ pathname: '/'}} />
     }
-    console.log(element)
+    const location = element.location.split(" ");
+    let degreesFirst = location[0].split("°");
+    let minutaFirst = degreesFirst[1].split("'");
+    let secFirst = minutaFirst[1].split('"');
+    let degreesSecond = location[1].split("°");
+    let minutaSecond = degreesSecond[1].split("'");
+    let secSecond = minutaSecond[1].split('"');
+    let degreesF = parseFloat(degreesFirst[0]);
+    let minutaF = parseFloat(minutaFirst[0]);
+    let secF = parseFloat(secFirst[0]);
+    let degreesS = parseFloat(degreesSecond[0]);
+    let minutaS = parseFloat(minutaSecond[0]);
+    let secS = parseFloat(secSecond[0]);
+    let totalSecondsF = (((minutaF*60) + secF)/3600) + degreesF;
+    let totalSecondsS = (((minutaS*60) + secS)/3600) + degreesS;
+    if(secFirst[1] === 'S') {
+      totalSecondsF = (totalSecondsF*(-1));
+    }
+    if(secSecond[1] === 'W') {
+      totalSecondsS = (totalSecondsS*(-1));
+    }
+    const myLocation = JSON.parse(localStorage.getItem('myLocation'));
+    const pathCoordinates = [
+      { lat: totalSecondsF, lng: totalSecondsS },
+      { lat: myLocation.latitude, lng: myLocation.longitude }
+    ];
     return (
       <div>
         <div className="advertising">
@@ -94,7 +118,8 @@ export class CafeDetails extends Component {
                 title="Contemplative Reptile"
                 className="image"
               />
-              <CardContent>
+              <CardContent className="BBB">
+              <div className="JJJJJ">
                 <Typography gutterBottom variant="h5" component="h2" className="title">
                 {element.title}
                 </Typography>
@@ -127,15 +152,40 @@ export class CafeDetails extends Component {
                 {element.alcohol ? (<FaGlassMartini />) : null}
                 {element.terrace ? (<FaTree/>) : null}
                 {element.allNight ? (<FaClock/>) : null}</div>
+                </div>
                 <div className= "map-block">
                   <Map
                     google={this.props.google}
                     onClick={this.onMapClicked}
+                    style={{
+                      width: '100%',
+                      height: '50%'
+                    }}
+                    initialCenter={{
+                      lat: totalSecondsF,
+                      lng: totalSecondsS
+                    }}
+                    zoom={15}
+                    className="map"
                   >
                     <Marker
                       title={'The marker`s title will appear as a tooltip.'}
-                      name={'SOMA'}
-                      position={{lat: 37.778519, lng: -122.405640}}
+                      name={'cafe'}
+                      position={{lat: totalSecondsF, lng: totalSecondsS}}
+                    />
+                    <Marker
+                      title={'The marker`s title will appear as a tooltip.'}
+                      name={'myLocation'}
+                      position={{lat: myLocation.latitude, lng: myLocation.longitude }}
+                    />
+                    <Polyline
+                      path={pathCoordinates}
+                      geodesic={true}
+                      options={{
+                          strokeColor: "#ff2527",
+                          strokeOpacity: 0.75,
+                          strokeWeight: 2,
+                        }}
                     />
                     <InfoWindow
                       marker={this.state.activeMarker}
