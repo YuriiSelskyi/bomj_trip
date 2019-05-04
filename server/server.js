@@ -43,16 +43,26 @@ app.post('/get-filtered-institution', (req, res) => {
 			sortingKey = key;
 		}
 	}
-	
+
 	for (let key in filter) {
-		if (!filter[key]) {
+		if (!filter[key] || key === sortingKey) {
 			delete filter[key];
 		}
+	}
+	
+	let filterArray = [filter];
+
+	if(sortingKey) {
+		filterArray.push({
+			[sortingKey]: {
+				[Op.gt]: 0
+			}
+		})
 	}
 
 	Cafes.findAll({
 		where: {
-			[Op.and]: filter
+			[Op.and]: filterArray
 		},
 		raw: true
 	})

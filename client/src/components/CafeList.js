@@ -28,7 +28,7 @@ export default class CafeList extends Component {
   
   renderStars = (index) => {
     const { list } = this.props;
-    return [...Array(list[index].rating)].map((e, i) => <FaStar key={i}/>);
+    return [...Array(list[index].popular)].map((e, i) => <FaStar key={i}/>);
   }
 
   renderCafeList = () => {
