@@ -1,7 +1,7 @@
 var Sequelize = require("sequelize");
 
 //NOTE: The host, the port and the dialect are with the default value, but I'm just leaving them here for configuration demonstration
-var connection = new Sequelize('bomj-trip', 'root', '', {
+var connection = new Sequelize('bomj-trip', 'root', '1234', {
 	host: 'localhost',
 	dialect: "mysql",
 	define: {
