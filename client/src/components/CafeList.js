@@ -70,6 +70,7 @@ export default class CafeList extends Component {
     const { redirect, id } = this.state;
     const { list } = this.props;
     if(redirect) {
+      console.log(list)
       return <Redirect to={{
         pathname: '/cafe-details',
         data: {

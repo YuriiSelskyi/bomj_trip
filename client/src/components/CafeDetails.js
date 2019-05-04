@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Advertising from './Advertising';
 import Footer from './Footer';
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -22,12 +23,15 @@ import {
 import '../styles/cafe-details.css';
 import '../styles/footer.css';
 
-class CafeDetails extends Component {
+export class CafeDetails extends Component {
   constructor(props) {
     super(props);
     const { location } = this.props;
     this.state = {
       data: location.data || JSON.parse(localStorage.getItem('data')),
+      showingInfoWindow: false,
+      activeMarker: {},
+      selectedPlace: {},
     };
     if (location.data !== undefined) {
       localStorage.setItem('data', JSON.stringify(location.data));
@@ -36,7 +40,23 @@ class CafeDetails extends Component {
 
   renderStars = (index) => {
     return [...Array(index)].map((e, i) => <FaStar key={i}/>);
-  }
+  };
+
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
+ 
+  onMapClicked = (props) => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      })
+    }
+  };
 
   render () {
     const { data } = this.state;
@@ -89,10 +109,28 @@ class CafeDetails extends Component {
                 {element.alcohol ? (<FaGlassMartini />) : null}
                 {element.terrace ? (<FaTree/>) : null}
                 {element.allNight ? (<FaClock/>) : null}</div>
-
-                <div>
-                  popopopopopopo
+                <div className= "map-block">
+                  <Map
+                    google={this.props.google}
+                    onClick={this.onMapClicked}
+                  >
+                    <Marker
+                      title={'The marker`s title will appear as a tooltip.'}
+                      name={'SOMA'}
+                      position={{lat: 37.778519, lng: -122.405640}}
+                    />
+                    <InfoWindow
+                      marker={this.state.activeMarker}
+                      visible={this.state.showingInfoWindow}
+                    >
+                      <div>
+                        <h1>{this.state.selectedPlace.name}</h1>
+                      </div>
+                    </InfoWindow>
+                  </Map>
                 </div>
+
+                
               </CardContent>
             </CardActionArea>
           </Card>
@@ -105,4 +143,6 @@ class CafeDetails extends Component {
   }
 }
 
-export default CafeDetails;
+export default GoogleApiWrapper ({
+  apiKey: 'AIzaSyCnSpJkRWDVv0zfiYlByxm9s3_NicrOTtQ',
+}) (CafeDetails);
