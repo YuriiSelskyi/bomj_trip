@@ -153,10 +153,10 @@ export default class FilterForCafe extends Component {
 				</div>
 				<div className="check-box">
 					<Button
-						className="common-style-for-cheak-box vegeterianMenu different-cheak-box"
+						className="common-style-for-cheak-box vegetarianMenu different-cheak-box"
 						variant="contained"
 						color="primary"
-						onClick={() => this.changeCheckboxButtons('vegeterianMenu')}
+						onClick={() => this.changeCheckboxButtons('vegetarianMenu')}
 					>
 						<FaPagelines color="white" />
 					</Button>
