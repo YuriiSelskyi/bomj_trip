@@ -118,7 +118,7 @@ export default class FilterForCafe extends Component {
     return (
       <div>
         <div className="radio-button">
-          <BottomNavigation showLabels>
+          <BottomNavigation showLabels className="Eee">
             <BottomNavigationAction
               className="filter"
               label="Cheapest"

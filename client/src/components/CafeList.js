@@ -34,7 +34,7 @@ export default class CafeList extends Component {
   renderCafeList = () => {
     const {list} = this.props;
     return list.map((item, index) => (
-      <Card className="card" key={index} >
+      <Card className="card" key={index} onClick={() => this.redirect(item.id)}>
           <CardActionArea>
             <CardMedia
               component="img"

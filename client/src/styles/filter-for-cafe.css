@@ -11,7 +11,7 @@
 .filter {
     margin-bottom: 2%;
     margin-top: 2%;
-    font-size: 48px !important;  
+    font-size: 30px !important;  
 }
 
 .radio-button{
@@ -41,10 +41,6 @@
     background-color: rgb(147, 149, 235) !important;
 }
 
-
-/* .different-cheak-box{
-    margin: 8% !important; 
-} */
 .common-style-for-cheak-box:after{
     
     white-space: pre-wrap;
@@ -106,4 +102,8 @@
 
 .shadows {
     box-shadow:  6px 6px 6px  rgb(52, 223, 61) !important;
+}
+
+.Eee {
+    background-color: transparent !important;
 }
